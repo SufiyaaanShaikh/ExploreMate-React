@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+    font-weight: normal;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+html {
+    overflow-x: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#hero {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#hero .left {
+  background: url("../images/SingUp.jpg") center/cover no-repeat;
+}
+
+#hero .right {
+  /* padding: 3em 6em 1em 6em; */
+  overflow-y: scroll;
+  flex-direction: column;
+}
+
+#hero .sec {
+  max-width: 400px;
+  text-align: center;
+}
+
+#hero .sec .logo {
+  display: flex;
+  width: 90px;
+  margin: 0 auto;
+}
+
+#hero .sec .logo img {
+  object-fit: cover;
+}
+
+#hero .right h1 {
+  font-size: 40px;
+  line-height: 55px;
+  /* margin-bottom: 15px; */
+}
+
+#hero .right h3 {
+  color: #5B5B5B;
+}
+
+#hero .right form {
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+#hero .right form .input-block {
+  height: 90px;
+}
+
+#hero .right form input {
+  border-bottom: 1px solid #B4B4B4;
+  padding: 1em 0em 1em;
+  width: 100%;
+}
+
+form .formErr {
+  color: red;
+  text-align: left;
+
+}
+
+#hero .right form input::placeholder {
+  color: #5B5B5B;
+  font-size: 16px;
+  font-weight: 500;
+  align-self: flex-end;
+}
+
+#hero .right form button {
+  background: #4169E1;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 0.8em;
+  border-radius: 50px;
+  margin: 1em 0em;
+  cursor: pointer;
+}
+
+#hero .right form .acc-para {
+  font-size: 16px;
+  padding-top: 0.5em;
+  align-self: center;
+}
+
+#hero .right form .acc-para a {
+  color: #4169E1;
+  margin-left: 0.4em;
+}
+
+#hero .right form .acc-para a:hover {
+  text-decoration: underline;
+}
+
+/* Log in Page  */
+#hero .login-left {
+  background: url("../images/login.jpg") center/cover no-repeat;
+}
+
+
+/* Responsive  */
+@media (max-width: 1440px) {}
+
+/* Extra Large screen  */
+@media (max-width: 1281px) {
+    #hero .sec {
+        padding: 0 1em;
+    }
+
+    #main .main-search {
+        margin-top: 1.5em;
+    }
+
+    #main .main-vac .container .block {
+        height: 170px;
+        width: 270px !important;
+    }
+
+    #review-head h1 {
+        width: 90%;
+    }
+
+
+}
+
+/* Large Screen  */
+@media (max-width: 1025px) {
+
+    /* SingUp Page   */
+    #hero .right h1 {
+        font-size: 35px;
+    }
+
+    #hero .right form button {
+        margin: 1em 0em;
+    }
+
+    /* Home Page  */
+    /* Header  */
+    s header nav a {
+        font-size: 16px;
+    }
+
+    /* Banner  */
+
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #main .main-vac .container .block {
+        width: 260px !important;
+    }
+
+    /* How it Works  */
+
+    #main-how .container .card h3 {
+        font-size: 20px;
+    }
+
+    #main-how .container .card p {
+        font-size: 14px;
+    }
+
+    /* Review  */
+
+
+    /* Feed  */
+
+    /* review  */
+
+
+    #review .review-container .block {
+        display: flex;
+        flex-direction: column;
+        gap: 0em;
+    }
+
+}
+
+/* Medium Screen  */
+@media (max-width: 769px) {
+
+    /* SingUp Page  */
+
+    #hero .right h1 {
+        line-height: 35px;
+        font-size: 26px;
+    }
+
+    #hero .right form input,
+    #hero .right form input::placeholder {
+        font-size: 14px;
+    }
+
+    #hero .right form button {
+        font-size: 14px;
+        margin: 0em 0em 1.5em 0em;
+    }
+
+    #hero .right form .acc-para {
+        font-size: 16px;
+    }
+
+    /* Home Page  */
+    /* Header  */
+
+    /* Banner  */
+
+    #main .main-search input,
+    #main .main-search input::placeholder {
+        font-size: 14px;
+    }
+
+    #main .main-search {
+        gap: 0.7em;
+        height: 2.4em;
+        border-radius: 10px;
+    }
+
+    #main .main-search img {
+        height: 1em;
+    }
+
+    #main .main-vac {
+        margin-top: 1em;
+    }
+
+    /* How it Works  */
+
+    /* Review  */
+
+    #main-review .container {
+        gap: 1em;
+        margin-top: 2em;
+    }
+
+    #review-head .sec {
+        min-height: 35vh;
+    }
+
+    #review-head form input,
+    #review-head form input::placeholder {
+        font-size: 14px;
+    }
+
+    /* Feed  */
+    #main-feed {
+        margin-bottom: 0;
+    }
+
+    #main-feed .container {
+        gap: 1em;
+    }
+
+    /* Footer  */
+    footer {
+        position: static;
+    }
+
+    /* review Page  */
+    #review-head h1 {
+        line-height: 45px;
+    }
+
+    #review-head form {
+        width: 70%;
+    }
+
+    #review .title {
+        display: grid;
+        gap: 1em;
+    }
+
+    #review .title .write {
+        inline-size: fit-content;
+    }
+
+    #single-r .content {
+        padding: 2em 4em;
+    }
+
+    /* Travel Partner Page  */
+    #profile-main {
+        margin-bottom: unset !important;
+    }
+
+}
+
+/* Small Screen  */
+@media (max-width: 641px) {
+    .footer-column {
+        justify-content: start;
+    }
+}
+
+/* Extra Small Screen */
+@media (max-width: 480px) {
+    .slick-dots li::marker {
+        font-size: 20px;
+    }
+
+    /* SingUp Page  */
+    #hero {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #hero .left {
+        display: none;
+    }
+
+    #hero .right {
+        padding: 1em 2em;
+        overflow: unset;
+    }
+
+    /* Home Page  */
+    /* Header  */
+    .menu {
+        display: block;
+    }
+
+
+    header nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        background: #ffffffc9;
+        width: 100%;
+        padding-bottom: 0.5em;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+
+    nav.nav-bgchange {
+        background: #fff;
+        box-shadow: rgba(149, 157, 165, 0.2) 2px 11px 18px 0px;
+    }
+
+    header .nav-show {
+        opacity: 1;
+        display: flex !important;
+    }
+
+    header nav #log {
+        flex-direction: column;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    /* Banner  */
+    #main {
+        height: unset;
+    }
+
+    #main h1 {
+        padding-top: 4em;
+    }
+
+    #main .main-vac {
+        margin-top: 3em;
+        padding-bottom: unset;
+    }
+
+    #main .main-vac .container {
+        margin-top: 0em;
+        padding: 1em 0em 2em 0em !important;
+    }
+
+    #main .main-search {
+        width: 100%;
+    }
+
+    #main .main-vac h3 {
+        font-size: 20px;
+    }
+
+    #main .main-vac .container .block h4 {
+        font-size: 14px;
+    }
+
+    /* How it works  */
+
+    .container {
+        padding: 2em 0em 0em !important;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Review  */
+
+    /* Feed  */
+    .feedSearchBox,
+    .feedSearchBox:focus-within {
+        width: 100%;
+    }
+
+    /* Footer  */
+    .footer-logo {
+        flex: 1 0 100%;
+    }
+
+    .footer-logo .follow {
+        display: block;
+    }
+
+    .footer-column .social-block {
+        display: none;
+    }
+
+    .footer-column {
+        justify-content: space-between;
+    }
+
+    /* Review Page  */
+    #review-head h1 {
+        line-height: 35px;
+    }
+
+    #review-head form {
+        width: 80%;
+        padding: 10px;
+    }
+
+    #review-head form input {
+        border-radius: 20px;
+        font-size: 14px;
+    }
+
+    #review {
+        padding: 2em 1em;
+        margin-bottom: 0;
+    }
+
+    #review .title {
+        margin-bottom: 2em;
+    }
+
+    #single-r h1 {
+        width: unset;
+        line-height: 38px;
+    }
+
+    #review .review-container {
+        gap: 1en;
+    }
+
+    #single-r {
+        /* margin-top: 5em; */
+    }
+
+    #single-r .img-block {
+        margin: 0em;
+    }
+
+    #single-r .content {
+        padding: 1em;
+    }
+
+    #single-r .content p {
+        font-size: 14px;
+    }
+
+    /* Travel Partner Page  */
+    #profile-main .container .profile-pic {
+        height: 6em;
+        width: 6em;
+    }
+
+    #profile-main .container .profil-para {
+        font-size: 12px;
+    }
+
+    #profile-main .container .profile-details .block .numbers,
+    #profile-main .container .profile-details .block .numbers {
+        font-size: 14px;
+    }
+
+    #profile-main .container .profile-details .block {
+        padding-inline: 1.7em;
+    }
+
+    /* My Account Page */
+
+    #profile-main .container .profile-pic .edit-icon {
+        right: 1px;
+        height: 35px;
+        width: 35px;
+    }
+
+    #profile-main .container .profile-pic .edit-icon img {
+        height: 13px;
+    }
+}
