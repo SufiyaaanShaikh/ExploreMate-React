@@ -8,8 +8,6 @@ import "../css/utility.css";
 function Home() {
   return (
     <div>
-        
-      <Toaster />
         <Link to={"/"}>Home</Link>
         <Link to={"/signup"}>Signup</Link>
         <Link to={"/login"}>Login</Link>
