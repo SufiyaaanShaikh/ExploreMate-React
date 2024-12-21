@@ -19,14 +19,19 @@ function Login() {
       .min(6, "Password must be at least 6 characters long")
       .required("Password is required"),
   });
+
   const validateCredentials = (email, password) => {
-    if (storedEmail === email && storedPassword === password) {
-      return true;
-    }
-    return false;
+    return (
+      storedEmail &&
+      storedPassword &&
+      storedEmail === email &&
+      storedPassword === password
+    );
   };
+
   return (
-    <div>
+    <>
+      {/* <Toaster /> */}
       <section id="hero" className="grid vh-100 w-100">
         <div className="left login-left"></div>
         <div className="right h-100 w-100 flex justify-content">
@@ -35,7 +40,7 @@ function Login() {
               <img src={logo} alt="logo" className="w-100 h-100 " />
             </Link>
             <h1 id="username" className="fw-700">
-              Welcome Back, {storedName}
+              Welcome Back, {storedName || "Guest"}
             </h1>
             <h3 className="">Enter Login Details</h3>
             <Formik
@@ -48,11 +53,10 @@ function Login() {
                 const { email, password } = values;
 
                 if (validateCredentials(email, password)) {
-                  navigate("/");
+                  toast.success("Login successful!");
                   setTimeout(() => {
-                    toast.success("Login successful!");
-                    toast.dismiss();
-                  }, 1000);
+                    navigate("/");
+                  }, 2000);
                   resetForm();
                 } else {
                   toast.error("Invalid email or password");
@@ -114,7 +118,7 @@ function Login() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 

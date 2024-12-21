@@ -6,6 +6,9 @@ import Home from "./pages/Home";
 import App from "./App";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Feed from "./pages/Feed";
+import Review from "./pages/Review";
+import { Toaster } from "react-hot-toast";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 let allRoutes = createBrowserRouter([
@@ -21,11 +24,22 @@ let allRoutes = createBrowserRouter([
     path: "/signup",
     element: <Signup />,
   },
+  {
+    path: "/users",
+    element: <Feed />,
+  },
+  {
+    path: "/review",
+    element: <Review />,
+  },
 ]);
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={allRoutes} />
-  </React.StrictMode>
+  <>
+    <Toaster />
+    <React.StrictMode>
+      <RouterProvider router={allRoutes} />
+    </React.StrictMode>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function

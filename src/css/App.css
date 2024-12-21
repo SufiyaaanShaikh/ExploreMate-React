@@ -119,6 +119,202 @@ form .formErr {
   background: url("../images/login.jpg") center/cover no-repeat;
 }
 
+header {
+    background: #ffffffc9;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+}
+
+header .sec {
+    justify-content: space-between;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+header.header-active {
+    background: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+header .logo img {
+    height: 4.2em;
+}
+
+
+.profile-menu {
+    position: relative;
+    display: block;
+}
+
+.profile-menu input {
+    display: none;
+}
+
+.profile-menu .drop {
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: -30px;
+    width: 150px;
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0, 1.12, 0.3, 1.38);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    flex-direction: column;
+    align-items: baseline;
+    overflow: hidden;
+    padding: 15px 20px;
+}
+
+
+.profile-menu #auth-dropdown a {
+    color: #000;
+}
+
+header :is(.right, nav, #user_auth) {
+    gap: 1.5em;
+}
+
+#profile-dropdown a {
+    font-size: 14px;
+    color: black;
+    width: max-content;
+}
+
+#profile-dropdown a span:hover {
+    color: #4169E1;
+}
+
+#profile-dropdown .name-block {
+    gap: 25px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.editprofile-btn {
+    height: 15px;
+}
+
+#profile-dropdown button {
+    background: transparent;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#profile-dropdown button:hover {
+    color: rgba(255, 0, 0, 0.819);
+}
+
+.drop.drop-checked {
+    /* display: flex; */
+    /* height: auto;
+    padding: 15px 20px; */
+}
+
+nav.nav-active {
+    height: auto;
+    opacity: 1;
+}
+
+header nav a {
+    color: #000;
+}
+
+header nav a:hover {
+    color: rgb(92 106 120);
+}
+
+header #user {
+    height: 20px;
+    cursor: pointer;
+
+}
+
+header nav #user img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.menu {
+    display: none;
+}
+
+.menu-ani {
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+}
+
+.burger {
+    position: relative;
+    width: 20px;
+    /* Further reduced from 30px */
+    height: 15px;
+    /* Further reduced from 22px */
+    background: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.burger input {
+    display: none;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    /* Further reduced from 3px */
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+
+.burger input:checked~span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 3px;
+    /* Further adjusted from 4px */
+}
+
+.burger input:checked~span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger input:checked~span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 13px;
+    /* Further adjusted from 19px */
+    left: 3px;
+    /* Further adjusted from 4px */
+}
+
+
 
 /* Responsive  */
 @media (max-width: 1440px) {}

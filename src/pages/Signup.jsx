@@ -25,7 +25,7 @@ function Signup() {
   });
 
   return (
-    <div>
+    <>
       {/* <Toaster /> */}
       <section id="hero" className="grid vh-100 w-100">
         <div className="left"></div>
@@ -150,7 +150,7 @@ function Signup() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 
