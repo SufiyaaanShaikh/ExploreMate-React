@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import profileIcon from "../images/profil.svg";
 import logo from "../images/Explore.svg";
+import menu from "../images/menu.svg";
 
 function Header() {
   return (
@@ -18,22 +19,12 @@ function Header() {
               <Link to={"/"} className="fw-500 f-16">
                 Home
               </Link>
-              {/* <a href="index.html">
-                Home
-              </a> */}
               <Link to={"/feed"} className="fw-500 f-16">
                 Users
               </Link>
-              {/* <a href="feed.html" className="fw-500 f-16">
-                Users
-              </a> */}
-
               <Link to={"/review"} className="fw-500 f-16">
                 Review
               </Link>
-              {/* <a href="review.html" className="fw-500 f-16">
-                Review
-              </a> */}
             </nav>
             <label for="profile-menu" className="profile-menu">
               <input type="checkbox" name="profile-menu" id="profile-menu" />
@@ -86,7 +77,6 @@ function Header() {
               <span></span>
               <span></span>
             </label>
-            <img src="images/menu.svg" alt="menu" className="menu" />
           </div>
         </div>
       </header>

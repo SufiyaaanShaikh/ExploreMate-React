@@ -4,13 +4,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/Home";
 import App from "./App";
+import "./css/App.css";
+import "./css/utility.css";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Feed from "./pages/Feed";
 import Review from "./pages/Review";
 import { Toaster } from "react-hot-toast";
+import { AuthProvider } from "./context/AuthContext"; // Import AuthProvider
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 let allRoutes = createBrowserRouter([
   {
     path: "/",
@@ -33,11 +37,16 @@ let allRoutes = createBrowserRouter([
     element: <Review />,
   },
 ]);
+
 root.render(
   <>
     <Toaster />
     <React.StrictMode>
-      <RouterProvider router={allRoutes} />
+      <AuthProvider>
+        {" "}
+        {/* Wrap the app with AuthProvider */}
+        <RouterProvider router={allRoutes} />
+      </AuthProvider>
     </React.StrictMode>
   </>
 );

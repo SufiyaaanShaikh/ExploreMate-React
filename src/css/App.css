@@ -209,11 +209,6 @@ header :is(.right, nav, #user_auth) {
     color: rgba(255, 0, 0, 0.819);
 }
 
-.drop.drop-checked {
-    /* display: flex; */
-    /* height: auto;
-    padding: 15px 20px; */
-}
 
 nav.nav-active {
     height: auto;
@@ -669,10 +664,6 @@ header nav #user img {
 
     #review .review-container {
         gap: 1en;
-    }
-
-    #single-r {
-        /* margin-top: 5em; */
     }
 
     #single-r .img-block {

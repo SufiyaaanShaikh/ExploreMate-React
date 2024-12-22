@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import toast, { Toaster } from "react-hot-toast";
 import "../css/App.css";
 import "../css/utility.css";
 import Header from "../components/Header";

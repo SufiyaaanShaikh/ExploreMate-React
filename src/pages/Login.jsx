@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import logo from "../images/Explore.svg";
-
-const storedName = localStorage.getItem("name");
-const storedEmail = localStorage.getItem("email");
-const storedPassword = localStorage.getItem("password");
+import AuthContext from "../context/AuthContext"; // Import AuthContext
 
 function Login() {
+  const { login, user } = useContext(AuthContext); // Use AuthContext
   const navigate = useNavigate();
+
   const validationSchema = Yup.object({
     email: Yup.string()
       .email("Invalid email format")
@@ -20,18 +19,8 @@ function Login() {
       .required("Password is required"),
   });
 
-  const validateCredentials = (email, password) => {
-    return (
-      storedEmail &&
-      storedPassword &&
-      storedEmail === email &&
-      storedPassword === password
-    );
-  };
-
   return (
     <>
-      {/* <Toaster /> */}
       <section id="hero" className="grid vh-100 w-100">
         <div className="left login-left"></div>
         <div className="right h-100 w-100 flex justify-content">
@@ -40,7 +29,7 @@ function Login() {
               <img src={logo} alt="logo" className="w-100 h-100 " />
             </Link>
             <h1 id="username" className="fw-700">
-              Welcome Back, {storedName || "Guest"}
+              Welcome Back, {user?.name || "Guest"}
             </h1>
             <h3 className="">Enter Login Details</h3>
             <Formik
@@ -52,11 +41,12 @@ function Login() {
               onSubmit={(values, { setSubmitting, resetForm }) => {
                 const { email, password } = values;
 
-                if (validateCredentials(email, password)) {
+                if (login(email, password)) {
                   toast.success("Login successful!");
                   setTimeout(() => {
-                    navigate("/");
-                  }, 2000);
+                    toast.dismiss();
+                    navigate("/"); // Navigate to the homepage or dashboard
+                  }, 1000);
                   resetForm();
                 } else {
                   toast.error("Invalid email or password");
