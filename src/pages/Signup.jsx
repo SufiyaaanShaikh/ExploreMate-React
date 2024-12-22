@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
+import { getValidationSchema } from "../schemas";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import logo from "../images/Explore.svg";
@@ -9,23 +9,6 @@ import AuthContext from "../context/AuthContext";
 function Signup() {
   const navigate = useNavigate();
   const { signup } = useContext(AuthContext);
-
-  const validationSchema = Yup.object({
-    name: Yup.string()
-      .matches(/^[A-Za-z\s]+$/, "Name must contain only letters and spaces")
-      .min(5, "Too Short!")
-      .max(20, "Too Long!")
-      .required("Name is required"),
-    email: Yup.string()
-      .email("Invalid email format")
-      .required("Email is required"),
-    password: Yup.string()
-      .min(6, "Password must be at least 6 characters long")
-      .required("Password is required"),
-    confirmPassword: Yup.string()
-      .oneOf([Yup.ref("password"), null], "Passwords must match")
-      .required("Confirm Password is required"),
-  });
 
   return (
     <section id="hero" className="grid vh-100 w-100">
@@ -46,7 +29,7 @@ function Signup() {
               password: "",
               confirmPassword: "",
             }}
-            validationSchema={validationSchema}
+            validationSchema={getValidationSchema(true)}
             onSubmit={(values, { setSubmitting, resetForm }) => {
               const { name, email, password } = values;
 

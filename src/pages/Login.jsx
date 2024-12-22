@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { getValidationSchema } from "../schemas";
 import * as Yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -10,14 +11,6 @@ function Login() {
   const { login, user } = useContext(AuthContext); // Use AuthContext
   const navigate = useNavigate();
 
-  const validationSchema = Yup.object({
-    email: Yup.string()
-      .email("Invalid email format")
-      .required("Email is required"),
-    password: Yup.string()
-      .min(6, "Password must be at least 6 characters long")
-      .required("Password is required"),
-  });
 
   return (
     <>
@@ -37,7 +30,7 @@ function Login() {
                 email: "",
                 password: "",
               }}
-              validationSchema={validationSchema}
+              validationSchema={getValidationSchema(false)}
               onSubmit={(values, { setSubmitting, resetForm }) => {
                 const { email, password } = values;
 
