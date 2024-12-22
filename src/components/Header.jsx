@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import profileIcon from "../images/profil.svg";
 import logo from "../images/Explore.svg";
-import menu from "../images/menu.svg";
 
 function Header() {
   return (

@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 
-export const getValidationSchema = (isSignup = false) => {
+export const getValidationSchema = (isSignup) => {
   const baseSchema = {
     email: Yup.string()
       .email("Invalid email format")
@@ -12,6 +12,7 @@ export const getValidationSchema = (isSignup = false) => {
 
   if (isSignup) {
     return Yup.object({
+      ...baseSchema,
       name: Yup.string()
         .matches(/^[A-Za-z\s]+$/, "Name must contain only letters and spaces")
         .min(5, "Too Short!")
@@ -20,7 +21,6 @@ export const getValidationSchema = (isSignup = false) => {
       confirmPassword: Yup.string()
         .oneOf([Yup.ref("password"), null], "Passwords must match")
         .required("Confirm Password is required"),
-      ...baseSchema,
     });
   }
 
