@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Banner from "../components/Home/Banner";
 import MainHow from "../components/Home/MainHow";
 import MainReview from "../components/Home/MainReview";
+import MainFeed from "../components/Home/MainFeed";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <Banner />
       <MainHow />
       <MainReview />
+      <MainFeed/>
     </>
   );
 }
