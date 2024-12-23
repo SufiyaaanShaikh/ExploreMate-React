@@ -31,7 +31,7 @@ const AuthForm = ({
           type="email"
           name="email"
           placeholder="Email Address"
-          {...(initialValues.name == undefined && {
+          {...(initialValues.name === undefined && {
             autoFocus: true,
           })}
         />
