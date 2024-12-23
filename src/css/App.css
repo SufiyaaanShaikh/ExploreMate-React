@@ -469,6 +469,50 @@ header nav #user img {
     z-index: 4;
 }
 
+/* How it Works  */
+#main-how {
+    background: linear-gradient(360deg, #F8F9FF, #DEE7FF);
+}
+
+#main-how .sec {
+    flex-direction: column;
+}
+
+#main-how .container {
+    gap: 1em;
+    padding: 3em 0em;
+    flex-wrap: wrap;
+}
+
+#main-how .container .card {
+    padding: 2em 1em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+    background: #fff;
+    height: 17em;
+    max-width: 17em;
+}
+
+#main-how .container .card:hover {
+    scale: 1.05;
+}
+
+#main-how .container .card>img {
+    height: 2.3em;
+    opacity: 0.6;
+}
+
+#main-how .container .card:hover img {
+    opacity: 1;
+    scale: 1.05;
+}
+
+#main-how .container .card h3 {
+    font-size: 24px;
+    margin: 0.5em 0em;
+}
+
+
 /* Responsive  */
 @media (max-width: 1440px) {}
 
