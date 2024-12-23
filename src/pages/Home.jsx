@@ -7,6 +7,7 @@ import Banner from "../components/Home/Banner";
 import MainHow from "../components/Home/MainHow";
 import MainReview from "../components/Home/MainReview";
 import MainFeed from "../components/Home/MainFeed";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
       <MainHow />
       <MainReview />
       <MainFeed/>
+      <Footer/>
     </>
   );
 }
