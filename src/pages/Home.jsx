@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import "../css/App.css";
 import "../css/utility.css";
 import Header from "../components/Header";
+import Banner from "../components/Home/Banner";
+import MainHow from "../components/Home/MainHow";
+import MainReview from "../components/Home/MainReview";
 
 function Home() {
   return (
@@ -12,6 +15,9 @@ function Home() {
       <Link to={"/signup"}>Signup</Link>
       <Link to={"/login"}>Login</Link> */}
       <Header />
+      <Banner />
+      <MainHow />
+      <MainReview />
     </>
   );
 }

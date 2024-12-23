@@ -512,6 +512,132 @@ header nav #user img {
     margin: 0.5em 0em;
 }
 
+/* Review  */
+#main-review {
+    background: #fff;
+    overflow-x: unset;
+}
+
+#main-review .sec {
+    flex-direction: column;
+    /* gap: 2em; */
+}
+
+#main-review .container {
+    gap: 1em;
+    margin-top: 2.5em;
+}
+
+#main-review .container .card {
+    grid-template-rows: 55% 40%;
+    padding: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+
+#main-review .container .img-block {
+    border-radius: 15px;
+}
+
+#main-review .container .img-block:hover {
+    scale: 1.02;
+}
+
+#main-review .container .img-block img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#main-review .container .content {
+    margin-top: 15px;
+}
+
+#main-review .container .content h5 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#main-review .container .content .content-title {
+    justify-content: space-between;
+}
+
+#main-review .container .content .content-title .rating {
+    gap: 8px;
+}
+
+#main-review .container .content .content-title .rating p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#main-review .container .content .content-title img {
+    height: 20px;
+}
+
+
+#main-review .container .content>p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#main-review .container .content .para {
+    font-size: 14px;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    box-orient: vertical;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    /* text-align: justify; */
+    margin-bottom: 5px;
+}
+
+#main-review .container .content .read {
+    color: #4169E1;
+    font-size: 14px;
+    position: relative;
+}
+
+#main-review .container .content .read::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    height: 1px;
+    width: 0%;
+    background: #4169E1;
+    left: 0;
+    bottom: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+#main-review .container .content .read:hover::after {
+    /* text-decoration: underline; */
+    width: 100%;
+}
+
+#main-review .container .content span {
+    /* display: block; */
+    margin-bottom: 24px;
+}
+
+.view-all {
+    margin-top: 3.5em;
+
+}
+
+.view-all a {
+    padding: 15px 3em;
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+}
+
+.view-all a:hover {
+    opacity: 0.8;
+}
+
 
 /* Responsive  */
 @media (max-width: 1440px) {}

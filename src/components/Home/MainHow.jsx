@@ -1,24 +1,21 @@
 import React from "react";
-import searchIcon from "../../images/search-black.svg";
-import partnerIcon from "../../images/partner.svg";
-import smileIcon from "../../images/smile.svg";
-import groupIcon from "../../images/group.svg";
-import airplaneIcon from "../../images/airplane.svg";
-import starIcon from "../../images/star.svg";
 import SectionHeading from "./SectionHeading";
+
+// Dynamically load images using require.context
+const images = require.context("../../images", false, /\.(png|jpe?g|svg)$/);
 
 function HowMain() {
   const cardData = [
     {
       id: 1,
-      imgSrc: searchIcon,
+      imgSrc: "search-black.svg",
       altText: "search",
       title: "Search Destination",
       description: "Search and select a destination that you are traveling to.",
     },
     {
       id: 2,
-      imgSrc: partnerIcon,
+      imgSrc: "partner.svg",
       altText: "partner",
       title: "Find Travel Partners",
       description:
@@ -26,7 +23,7 @@ function HowMain() {
     },
     {
       id: 3,
-      imgSrc: smileIcon,
+      imgSrc: "smile.svg",
       altText: "smile",
       title: "Get Connected",
       description:
@@ -34,7 +31,7 @@ function HowMain() {
     },
     {
       id: 4,
-      imgSrc: groupIcon,
+      imgSrc: "group.svg",
       altText: "group",
       title: "Trip Together",
       description:
@@ -42,7 +39,7 @@ function HowMain() {
     },
     {
       id: 5,
-      imgSrc: airplaneIcon,
+      imgSrc: "airplane.svg",
       altText: "airplane",
       title: "Enjoy the Journey",
       description:
@@ -50,7 +47,7 @@ function HowMain() {
     },
     {
       id: 6,
-      imgSrc: starIcon,
+      imgSrc: "star.svg",
       altText: "star",
       title: "Share Reviews",
       description:
@@ -59,21 +56,20 @@ function HowMain() {
   ];
 
   return (
-    <>
-      <section id="main-how" className="vh-70 position">
-        <div className="sec flex justify-content items-center text-center vh-70 pad">
-          <SectionHeading
-            secHead="How it works?"
-            secSubHead="From Start to Finish"
-          />
-          <div className="container flex justify-content items-center grid-4">
-            <Cards cardData={cardData} />
-          </div>
+    <section id="main-how" className="vh-70 position">
+      <div className="sec flex justify-content items-center text-center vh-70 pad">
+        <SectionHeading
+          secHead="How it works?"
+          secSubHead="From Start to Finish"
+        />
+        <div className="container flex justify-content items-center grid-4">
+          <Cards cardData={cardData} />
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
+
 export default HowMain;
 
 function Cards({ cardData }) {
@@ -81,7 +77,8 @@ function Cards({ cardData }) {
     <>
       {cardData.map((card) => (
         <div className="card w-100" key={card.id}>
-          <img src={card.imgSrc} alt={card.altText} />
+          {/* Dynamically require the image using the imgSrc value */}
+          <img src={images(`./${card.imgSrc}`)} alt={card.altText} />
           <h3 className="fw-500">{card.title}</h3>
           <p className="para-c para-f">{card.description}</p>
         </div>
