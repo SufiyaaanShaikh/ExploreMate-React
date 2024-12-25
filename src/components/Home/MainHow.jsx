@@ -1,7 +1,6 @@
 import React from "react";
 import SectionHeading from "./SectionHeading";
 
-// Dynamically load images using require.context
 const images = require.context("../../images", false, /\.(png|jpe?g|svg)$/);
 const cardData = [
   {
@@ -76,7 +75,6 @@ function Cards({ cardData }) {
     <>
       {cardData.map((card) => (
         <div className="card w-100" key={card.id}>
-          {/* Dynamically require the image using the imgSrc value */}
           <img src={images(`./${card.imgSrc}`)} alt={card.altText} />
           <h3 className="fw-500">{card.title}</h3>
           <p className="para-c para-f">{card.description}</p>

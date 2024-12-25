@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/Home";
-import App from "./App";
+// import App from "./App";
 import "./css/App.css";
 import "./css/utility.css";
 import Login from "./pages/Login";
@@ -29,7 +29,7 @@ let allRoutes = createBrowserRouter([
     element: <Signup />,
   },
   {
-    path: "/users",
+    path: "/feed",
     element: <Feed />,
   },
   {
