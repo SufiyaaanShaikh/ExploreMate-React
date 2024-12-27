@@ -29,7 +29,7 @@ let allRoutes = createBrowserRouter([
     element: <Signup />,
   },
   {
-    path: "/users",
+    path: "/feed",
     element: <Feed />,
   },
   {

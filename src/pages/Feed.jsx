@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Header from "../components/Header";
+import FeedContainer from "../components/Feed/FeedContainer";
 
 function Feed() {
   return (
-    <div>Feed</div>
-  )
+    <>
+      <Header />
+      <FeedContainer />
+    </>
+  );
 }
 
-export default Feed
+export default Feed;

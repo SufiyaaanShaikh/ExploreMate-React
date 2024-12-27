@@ -469,6 +469,151 @@ header nav #user img {
     z-index: 4;
 }
 
+/* Feed  */
+#main-feed {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 26em;
+    border-radius: 0 0 30px 30px;
+    background: linear-gradient(360deg, #F8F9FF, #DEE7FF);
+}
+
+#main-feed .sec {
+    flex-direction: column;
+
+}
+
+#main-feed .container {
+    gap: 2em 1em;
+    margin-top: 2.5em;
+}
+
+#main-feed .container .card {
+    height: 250px;
+    grid-template-rows: 30% 60%;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    gap: 10px;
+    background: #fff;
+}
+
+#main-feed .container .card .img-block {
+    height: 60px;
+    width: 60px;
+}
+
+#main-feed .container .card .img-block img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#main-feed .container .card .head-block {
+    justify-content: space-between;
+}
+
+.followBtn {
+    cursor: pointer;
+    font-size: 12px;
+    color: #fff;
+    background: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 100px;
+}
+
+.followBtn:active {
+    background: #333;
+    transform: scale(0.95);
+}
+
+.followBtn:hover {
+    opacity: 0.8;
+}
+
+/* #main-feed .container .card .content {
+    margin-top: 20px;
+} */
+
+/* #main-feed .container .card .content .title {
+    
+    margin-bottom: 7px;
+} */
+
+#main-feed .container .card .content .title h3 {
+    font-size: 18px;
+}
+
+
+#main-feed .container .card .content .detail {
+    gap: 7px;
+}
+
+#main-feed .container .card .content .detail img {
+    height: 14px;
+}
+
+#main-feed .container .card .content .view {
+    margin-top: 10px;
+}
+
+.viewProfileBtn {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.viewProfileBtn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Feed Page  */
+
+.feed-sec {
+    padding-top: 7em !important;
+    min-height: 100vh;
+}
+
+.feedSearchBox {
+    padding: 0.7em;
+    border: 1px solid #999;
+    border-radius: 10px;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.feedSearchBox img {
+    height: 15px;
+    margin-right: 8px;
+}
+
+#feedSearch {
+    width: 100%;
+    background: unset;
+    color: #4e515c;
+}
+
+.feedSearchBox:focus-within {
+    width: 60%;
+    border-color: #000
+}
+
+.feedHeading {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+
 /* Responsive  */
 @media (max-width: 1440px) {}
 
