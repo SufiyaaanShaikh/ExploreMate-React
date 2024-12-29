@@ -11,9 +11,9 @@ function Header() {
       <header className="w-100">
         <div className="sec flex items-center">
           <div className="logo">
-            <a href="index.html">
+            <Link to="/">
               <img src={logo} alt="logo" />
-            </a>
+            </Link>
           </div>
           <div className="right flex items-center">
             <nav className="flex">
