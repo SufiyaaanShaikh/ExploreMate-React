@@ -16,7 +16,7 @@ const Login = () => {
   };
 
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    const { name, email, password } = values;
+    const { email, password } = values;
     if (login(email, password)) {
       toast.success("Login successful!");
       setTimeout(() => {

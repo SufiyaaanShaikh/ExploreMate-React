@@ -75,7 +75,7 @@ function Cards({ cardData }) {
     <>
       {cardData.map((card) => (
         <div className="card w-100" key={card.id}>
-          <img src={images(`./${card.imgSrc}`)} alt={card.altText} />
+          <img className="mx-auto" src={images(`./${card.imgSrc}`)} alt={card.altText} />
           <h3 className="fw-500">{card.title}</h3>
           <p className="para-c para-f">{card.description}</p>
         </div>

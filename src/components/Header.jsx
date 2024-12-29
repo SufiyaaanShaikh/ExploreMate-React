@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Example from "../components/Home/Example";
 import profileIcon from "../images/profil.svg";
 import logo from "../images/Explore.svg";
 
@@ -29,11 +30,12 @@ function Header() {
               <input type="checkbox" name="profile-menu" id="profile-menu" />
               {/* <!-- profile-icon  --> */}
               <div className="" id="user">
-                <img
+                {/* <img
                   src={profileIcon}
                   className="w-100 h-100"
                   alt="profile-icon"
-                />
+                /> */}
+                      <Example/>
               </div>
               {/* <!-- user-auth --> */}
               <div id="auth-dropdown" className="drop flex">
