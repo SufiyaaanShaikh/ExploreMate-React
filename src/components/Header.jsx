@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Example from "../components/Home/Example";
 import profileIcon from "../images/profil.svg";
 import logo from "../images/Explore.svg";
+import StaggeredDropDown from "./Home/StaggeredDropDown";
 
 function Header() {
   return (
@@ -35,7 +36,8 @@ function Header() {
                   className="w-100 h-100"
                   alt="profile-icon"
                 /> */}
-                      <Example/>
+                      {/* <Example/> */}
+                      <StaggeredDropDown/>
               </div>
               {/* <!-- user-auth --> */}
               <div id="auth-dropdown" className="drop flex">
