@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -11,7 +15,7 @@
     text-decoration: none;
     outline: none;
     border: none;
-    transition: all 0.2s ease-in-out;
+    /* transition: all 0.2s ease-in-out; */
 }
 
 html {
@@ -225,7 +229,7 @@ header nav a:hover {
 }
 
 header #user {
-    height: 20px;
+    /* height: 20px; */
     cursor: pointer;
 
 }
@@ -312,6 +316,10 @@ header nav #user img {
 
 /* Slick slider CSS  */
 
+.slick-list {
+    overflow: visible !important;
+}
+
 .slick-arrow {
     display: none !important;
 }
@@ -327,18 +335,19 @@ header nav #user img {
     align-items: center;
 }
 
-.slick-dots li::marker {
+.slick-dots li button::before {
     color: #FFF !important;
-    font-size: 26px;
+    font-size: 14px;
+    /* Adjust size as needed */
 }
 
-.slick-dots li.slick-active::marker {
-    color: rgb(45 104 248) !important;
+.slick-dots li.slick-active button::before {
+    color: rgb(45, 104, 248) !important;
 }
 
-.slick-dots li button {
+/* .slick-dots li button {
     display: none !important;
-}
+} */
 
 .slick-track {
     display: flex !important;
@@ -467,6 +476,379 @@ header nav #user img {
     bottom: 13px;
     left: 9px;
     z-index: 4;
+}
+
+/* How it Works  */
+#main-how {
+    background: linear-gradient(360deg, #F8F9FF, #DEE7FF);
+}
+
+#main-how .sec {
+    flex-direction: column;
+}
+
+#main-how .container {
+    gap: 1em;
+    padding: 3em 0em;
+    flex-wrap: wrap;
+}
+
+#main-how .container .card {
+    padding: 2em 1em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+    background: #fff;
+    height: 17em;
+    max-width: 17em;
+}
+
+#main-how .container .card:hover {
+    scale: 1.05;
+}
+
+#main-how .container .card>img {
+    height: 2.3em;
+    opacity: 0.6;
+}
+
+#main-how .container .card:hover img {
+    opacity: 1;
+    scale: 1.05;
+}
+
+#main-how .container .card h3 {
+    font-size: 24px;
+    margin: 0.5em 0em;
+}
+
+/* Review  */
+#main-review {
+    background: #fff;
+    overflow-x: unset;
+}
+
+#main-review .sec {
+    flex-direction: column;
+    /* gap: 2em; */
+}
+
+#main-review .container {
+    gap: 1em;
+    margin-top: 2.5em;
+}
+
+#main-review .container .card {
+    grid-template-rows: 55% 40%;
+    padding: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+
+#main-review .container .img-block {
+    border-radius: 15px;
+}
+
+#main-review .container .img-block:hover {
+    scale: 1.02;
+}
+
+#main-review .container .img-block img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#main-review .container .content {
+    margin-top: 15px;
+}
+
+#main-review .container .content h5 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#main-review .container .content .content-title {
+    justify-content: space-between;
+}
+
+#main-review .container .content .content-title .rating {
+    gap: 8px;
+}
+
+#main-review .container .content .content-title .rating p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#main-review .container .content .content-title img {
+    height: 20px;
+}
+
+
+#main-review .container .content>p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#main-review .container .content .para {
+    font-size: 14px;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    box-orient: vertical;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    /* text-align: justify; */
+    margin-bottom: 5px;
+}
+
+#main-review .container .content .read {
+    color: #4169E1;
+    font-size: 14px;
+    position: relative;
+}
+
+#main-review .container .content .read::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    height: 1px;
+    width: 0%;
+    background: #4169E1;
+    left: 0;
+    bottom: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+#main-review .container .content .read:hover::after {
+    /* text-decoration: underline; */
+    width: 100%;
+}
+
+#main-review .container .content span {
+    /* display: block; */
+    margin-bottom: 24px;
+}
+
+.view-all {
+    margin-top: 3.5em;
+
+}
+
+.view-all a {
+    padding: 15px 3em;
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+}
+
+.view-all a:hover {
+    opacity: 0.8;
+}
+
+/* Feed  */
+#main-feed {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 26em;
+    border-radius: 0 0 30px 30px;
+    background: linear-gradient(360deg, #F8F9FF, #DEE7FF);
+}
+
+#main-feed .sec {
+    flex-direction: column;
+
+}
+
+#main-feed .container {
+    gap: 2em 1em;
+    margin-top: 2.5em;
+}
+
+#main-feed .container .card {
+    height: 250px;
+    grid-template-rows: 30% 60%;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    gap: 10px;
+    background: #fff;
+}
+
+#main-feed .container .card .img-block {
+    height: 60px;
+    width: 60px;
+}
+
+#main-feed .container .card .img-block img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#main-feed .container .card .head-block {
+    justify-content: space-between;
+}
+
+.followBtn {
+    cursor: pointer;
+    font-size: 12px;
+    color: #fff;
+    background: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 100px;
+}
+
+.followBtn:active {
+    background: #333;
+    transform: scale(0.95);
+}
+
+.followBtn:hover {
+    opacity: 0.8;
+}
+
+/* #main-feed .container .card .content {
+    margin-top: 20px;
+} */
+
+/* #main-feed .container .card .content .title {
+    
+    margin-bottom: 7px;
+} */
+
+#main-feed .container .card .content .title h3 {
+    font-size: 18px;
+}
+
+
+#main-feed .container .card .content .detail {
+    gap: 7px;
+}
+
+#main-feed .container .card .content .detail img {
+    height: 14px;
+}
+
+#main-feed .container .card .content .view {
+    margin-top: 10px;
+}
+
+.viewProfileBtn {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.viewProfileBtn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Footer  */
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+    background: #fff;
+}
+
+footer .sec {
+    flex-direction: column;
+}
+
+.footer-column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+    flex: 2 0 14rem;
+}
+
+.footer-column .block {
+    min-width: 10rem;
+}
+
+.footer-logo {
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.footer-logo .follow {
+    display: none;
+}
+
+.footer-logo .container {
+    display: flex;
+    padding: 0 !important;
+    gap: 1em;
+}
+
+.footer-logo h3 {
+    margin-bottom: 1em !important;
+}
+
+.footer-logo img {
+    height: 90px;
+}
+
+.footer-column .block h3 {
+    font-size: 22px;
+    margin-bottom: 1.5em;
+}
+
+.footer-column .block .link {
+    font-size: 16px;
+    margin-bottom: 1em;
+    position: relative;
+    width: fit-content;
+}
+
+.footer-column .block .link::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    height: 1px;
+    width: 0%;
+    background: #4e515c;
+    left: 0;
+    bottom: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-column .block .link:hover::after {
+    width: 100%;
+}
+
+.footer-column .block .card {
+    margin-bottom: 0.7em;
+
+}
+
+.footer-column .block .card img {
+    height: 20px;
+}
+
+.footer-column .block .card img:hover {
+    opacity: 0.7;
+    scale: 1.1;
+}
+
+.footer-bottom {
+    margin-top: 15px;
 }
 
 /* Responsive  */
