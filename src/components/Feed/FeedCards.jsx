@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import SectionHeading from "./SectionHeading";
 import users from "../../Data/usersData";
-import imgSrcUser from "../../images/user.webp";
+import imgSrcUser from "../../images/user.png";
 import cityIcon from "../../images/destiniaion.svg";
 import calendarIcon from "../../images/calendar.svg";
 import groupIcon from "../../images/group.svg";
-import FeedCards from "../Feed/FeedCards";
-import { Link } from "react-router-dom";
 
-const MainFeed = () => {
+function FeedCards({}) {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
@@ -18,37 +15,10 @@ const MainFeed = () => {
   useEffect(() => {
     const usersToDisplay = isHomePage ? users.slice(0, 4) : users;
     setDisplayedUsers(usersToDisplay);
-  }, [isHomePage]); 
-
-  return (
-    <section id="main-feed" className="vh-70 position">
-      <div className="sec vh-70 pad flex justify-content">
-        <SectionHeading
-          secHead="Travel Feed"
-          secSubHead="Find a travel buddy"
-        />
-        <div
-          id="feedContainer"
-          className="container grid grid-4 main-feedContainer"
-        >
-          <FeedCards/>
-        </div>
-        <div className="view-all text-center">
-          <Link to="/feed" className="btn fw-500 para-f">
-            View All
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default MainFeed;
-
-const Cards = ({ userData }) => {
+  }, [isHomePage]);
   return (
     <>
-      {userData.map((user) => (
+      {displayedUsers.map((user) => (
         <div className="card grid" key={user.id}>
           <div className="head-block flex items-center">
             <div className="img-block">
@@ -82,4 +52,6 @@ const Cards = ({ userData }) => {
       ))}
     </>
   );
-};
+}
+
+export default FeedCards;
