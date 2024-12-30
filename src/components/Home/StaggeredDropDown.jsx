@@ -1,10 +1,4 @@
-import {
-  FiEdit,
-  FiTrash,
-  FiShare,
-  FiUser,
-  FiLogIn,
-} from "react-icons/fi";
+import { FiEdit, FiTrash, FiShare, FiUser, FiLogIn } from "react-icons/fi";
 import { useState, useContext } from "react";
 import { motion } from "framer-motion";
 import profileIcon from "../../images/profil.svg";
@@ -48,30 +42,30 @@ const StaggeredDropDown = () => {
                 Icon={FiUser}
                 text="Profile"
                 path="/profile"
-                bgHover="hover:bg-indigo-100"
-                textHover="hover:text-indigo-500"
+                bgHover="hover:bg-[#dee7ff]"
+                textHover="hover:text-[#003dde]"
               />
               <Option
                 setDropdownOpen={setDropdownOpen}
                 Icon={FiEdit}
                 text="Edit"
                 path="/edit"
-                bgHover="hover:bg-indigo-100"
-                textHover="hover:text-indigo-500"
+                bgHover="hover:bg-[#dee7ff]"
+                textHover="hover:text-[#003dde]"
               />
               <Option
                 setDropdownOpen={setDropdownOpen}
                 Icon={FiShare}
                 text="Share"
                 path="/share"
-                bgHover="hover:bg-indigo-100"
-                textHover="hover:text-indigo-500"
+                bgHover="hover:bg-[#dee7ff]"
+                textHover="hover:text-[#003dde]"
               />
               <Option
                 setDropdownOpen={setDropdownOpen}
                 Icon={FiTrash}
-                bgHover="hover:bg-red-100"
-                textHover="hover:text-red-500"
+                bgHover="hover:bg-[#ffdede]"
+                textHover="hover:text-[#de0000]"
                 text="Logout"
                 onClick={() => {
                   setIsOpen(true);
@@ -86,16 +80,16 @@ const StaggeredDropDown = () => {
                 Icon={FiLogIn}
                 text="SignUp"
                 path="/signup"
-                bgHover="hover:bg-indigo-100"
-                textHover="hover:text-indigo-500"
+                bgHover="hover:bg-[#dee7ff]"
+                textHover="hover:text-[#003dde]"
               />
               <Option
                 setDropdownOpen={setDropdownOpen}
                 Icon={FiUser}
                 text="Login"
                 path="/login"
-                bgHover="hover:bg-indigo-100"
-                textHover="hover:text-indigo-500"
+                bgHover="hover:bg-[#dee7ff]"
+                textHover="hover:text-[#003dde]"
               />
             </>
           )}
