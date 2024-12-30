@@ -124,7 +124,8 @@ form .formErr {
 
 /* header */
 header {
-  background: #ffffffc9;
+  /* background: #ffffffc9; */
+  background: #dee7ff;
   z-index: 10;
   position: fixed;
   top: 0;
