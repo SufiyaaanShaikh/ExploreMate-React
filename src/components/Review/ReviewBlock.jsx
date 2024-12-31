@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ReviewBlock = ({ image, location, title, description }) => (
   <div className="review-block grid">
-    <a href="single-review.html" className="img-block h-100">
+    <Link to="/single-review" className="img-block h-100">
       <img src={image} alt={location} className="w-100 h-100" />
-    </a>
+    </Link>
     <div className="content grid">
       <p className="para-c para-f">{location}</p>
       <h2 className="sec-title fw-500">{title}</h2>
