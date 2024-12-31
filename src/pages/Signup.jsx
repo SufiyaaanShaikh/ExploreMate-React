@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import AuthForm from "../components/From/AuthForm";
+import toast from "react-hot-toast";
+import AuthForm from "../components/Form/AuthForm";
 import { getValidationSchema } from "../schemas";
 import AuthContext from "../context/AuthContext";
-import FormHedaing from "../components/From/FormHedaing";
-import toast from "react-hot-toast";
+import FormHedaing from "../components/Form/FormHedaing";
 import { useNavigate } from "react-router-dom";
 
 const Signup = () => {

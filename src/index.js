@@ -13,6 +13,8 @@ import Review from "./pages/Review";
 import { Toaster } from "react-hot-toast";
 import { AuthProvider } from "./context/AuthContext"; // Import AuthProvider
 import SingleReview from "./components/Review/SingleReview";
+import Profile from "./pages/Profile";
+import EditProfile from "./pages/EditProfile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -39,7 +41,15 @@ let allRoutes = createBrowserRouter([
   },
   {
     path: "/single-review",
-    element: <SingleReview/>,
+    element: <SingleReview />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
+  },
+  {
+    path: "edit-profile",
+    element: <EditProfile />,
   },
 ]);
 

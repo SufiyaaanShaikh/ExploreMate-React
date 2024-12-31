@@ -1132,6 +1132,385 @@ footer .sec {
   height: 50px;
 }
 
+/* TravelPartner  */
+#profile-main {
+  /* margin-bottom: 26em; */
+  margin-bottom: 26em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#profile-main .bg {
+  background: linear-gradient(360deg, #f8f9ff, #dee7ff);
+  width: 100%;
+  min-height: 40vh;
+}
+
+#profile-main .profile-block {
+  background: #fff;
+  border-radius: 0 0 30px 30px;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+
+#profile-main .container {
+  max-width: 700px;
+  min-height: 55vh;
+  background: #fff;
+  margin-inline: auto;
+  flex-direction: column;
+}
+
+#profile-main .container .profile-pic {
+  height: 11em;
+  width: 11em;
+  margin-inline: auto;
+  margin-top: -4em;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #a5a58d;
+  position: relative;
+}
+
+#profile-main .container .profile-pic > img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#profile-main .container .profile-pic .edit-icon {
+  position: absolute;
+  place-items: center;
+  bottom: 0px;
+  right: 7px;
+  height: 50px;
+  width: 50px;
+  background: #dee7ff;
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+
+#profile-main .container .profile-pic .edit-icon img {
+  height: 20px;
+}
+
+#shareBtn,
+#editBtn {
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  background: #000;
+  padding: 15px 35px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  gap: 9px;
+}
+
+#shareBtn img,
+#editBtn img {
+  height: 15px;
+}
+
+#editBtn:active,
+#shareBtn:active {
+  background: #333;
+  transform: scale(0.95);
+}
+
+#profile-main .container h2 {
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-top: 15px;
+}
+
+#profile-main .container .profil-para {
+  max-width: 50%;
+  text-align: center;
+}
+
+#profile-main .container .profile-details {
+  width: 100%;
+  margin-top: 2em;
+  text-align: center;
+  margin-inline: auto;
+}
+
+#profile-main .container .profile-details .block {
+  display: inline-block;
+  padding-inline: 3em;
+}
+
+#profile-main .container .profile-details .block:nth-child(2) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#profile-main .container .profile-details .block .numbers {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+#profile-main .container .profile-details .block .des {
+  font-size: 14px;
+}
+
+.btn-block {
+  gap: 1em;
+  margin-top: 3em;
+}
+
+#msgBtn {
+  cursor: pointer;
+  font-size: 12px;
+  color: #000;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 100px;
+}
+
+#msgBtn:active {
+  background: #333;
+  transform: scale(0.95);
+}
+
+#msgBtn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.tab-container {
+  background: #fff;
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.tab-wrapper {
+  text-align: center;
+  display: block;
+  margin: auto;
+  max-width: 500px;
+}
+
+.tabs {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.tab-link {
+  margin: 0 1%;
+  list-style: none;
+  padding: 10px 40px;
+  color: #000;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+  border-bottom: solid 3px rgba(255, 255, 255, 0);
+  letter-spacing: 1px;
+  border-radius: 25px;
+}
+
+.tab-link:hover {
+  color: #999;
+}
+
+.tab-link.active {
+  background: #000;
+  color: #fff;
+}
+
+.content-wrapper {
+  padding: 40px 80px;
+}
+
+
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content .tab-block {
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tab-content .tab-block .card {
+  width: 100%;
+  height: 10em;
+  padding: 20px;
+  background-color: #dee7ff;
+  border-radius: 10px;
+  display: grid;
+  place-content: center;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* edit profile  */
+.myacc > .container {
+  padding: 50px 40px;
+  margin-top: 7em;
+  border-radius: 12px;
+}
+
+.myacc > .container .topic {
+  font-size: 24px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.container > .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 20%;
+  border: 1px solid #80808057;
+  margin-right: 50px;
+  padding: 10px;
+}
+
+.list .hori {
+  width: 87%;
+  background: #80808057;
+  height: 1px;
+  margin-left: 10px;
+}
+
+.content .text-content {
+  width: 80%;
+  height: 100%;
+}
+
+.tab {
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: none;
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+
+.content .list label:hover {
+  color: #ccc;
+}
+
+.myacc-input-block {
+  margin-top: 10px;
+}
+
+.myacc-input-block form {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+}
+
+.myacc-block {
+  gap: 10px;
+  flex-direction: column;
+}
+
+.myacc-block input {
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.editSaveBtn {
+  background-color: #000;
+  color: #fff;
+  padding: 15px;
+  width: 140px;
+  cursor: pointer;
+  border-radius: 10px;
+  grid-area: 5 / 1 / 6 / 3;
+}
+
+.changePwd-container {
+  grid-template-columns: 50% 50%;
+}
+
+.changePwd-container form {
+  margin-top: 1em;
+  gap: 1.5em;
+}
+
+.changePwd-block {
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.changePwd-block .input-block {
+  padding: 10px;
+  border: 1px solid #000;
+
+  border-radius: 5px;
+}
+
+.changePwd-block .input-block input {
+  width: 100%;
+}
+
+.changePwd-block .input-block .eyeBtn {
+  background: transparent;
+  cursor: pointer;
+}
+
+.changePwd-block .input-block .eyeBtn img {
+  height: 20px;
+}
+
+form .resetPwd {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.img-container {
+  display: grid;
+  place-items: center;
+}
+
+.img-container .img-block {
+  height: 200px;
+  width: 300px;
+}
+
+.img-container .img-block img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 /* Responsive  */
 @media (max-width: 1440px) {
 }

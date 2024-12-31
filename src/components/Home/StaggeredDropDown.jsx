@@ -1,5 +1,6 @@
 import { FiEdit, FiTrash, FiShare, FiUser, FiLogIn } from "react-icons/fi";
 import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import profileIcon from "../../images/profil.svg";
 import toast from "react-hot-toast";
@@ -9,6 +10,7 @@ import SpringModal from "../Home/SpringModal";
 
 // Main Dropdown Component
 const StaggeredDropDown = () => {
+  const navigate = useNavigate();
   const { user, logout } = useContext(AuthContext);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +51,7 @@ const StaggeredDropDown = () => {
                 setDropdownOpen={setDropdownOpen}
                 Icon={FiEdit}
                 text="Edit"
-                path="/edit"
+                path="/edit-profile"
                 bgHover="hover:bg-[#dee7ff]"
                 textHover="hover:text-[#003dde]"
               />
@@ -103,6 +105,7 @@ const StaggeredDropDown = () => {
         onConfirm={() => {
           logout();
           setIsOpen(false);
+          navigate("/");
           toast.success("Successfully logged out!");
         }}
       />
