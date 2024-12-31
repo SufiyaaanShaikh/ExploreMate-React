@@ -14,7 +14,7 @@ const reviewData = [
     rating: 7.5,
     description:
       "Mumbai, often known as the City of Dreams, offers a rich and diverse experience that captivated me during a recent city tour. The journey began at the iconic Gateway of India, a majestic colonial-era monument that stands proudly overlooking the Arabian Sea.",
-    link: "/review",
+    link: "/single-review",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const reviewData = [
     rating: 7.5,
     description:
       "Mumbai, often known as the City of Dreams, offers a rich and diverse experience that captivated me during a recent city tour. The journey began at the iconic Gateway of India, a majestic colonial-era monument that stands proudly overlooking the Arabian Sea.",
-    link: "/review",
+    link: "/single-review",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const reviewData = [
     rating: 7.5,
     description:
       "Mumbai, often known as the City of Dreams, offers a rich and diverse experience that captivated me during a recent city tour. The journey began at the iconic Gateway of India, a majestic colonial-era monument that stands proudly overlooking the Arabian Sea.",
-    link: "/review",
+    link: "/single-review",
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const reviewData = [
     rating: 7.5,
     description:
       "Mumbai, often known as the City of Dreams, offers a rich and diverse experience that captivated me during a recent city tour. The journey began at the iconic Gateway of India, a majestic colonial-era monument that stands proudly overlooking the Arabian Sea.",
-    link: "/review",
+    link: "/single-review",
   },
 ];
 
