@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation,Link } from "react-router-dom";
 import users from "../../Data/usersData";
 import imgSrcUser from "../../images/user.png";
 import cityIcon from "../../images/destiniaion.svg";
@@ -43,9 +43,9 @@ function FeedCards({}) {
               <p className="para-c para-f">{user.group}</p>
             </div>
             <div className="view">
-              <button className="viewProfileBtn flex items-center justify-content">
+              <Link to={"user-profile"} className="viewProfileBtn flex items-center justify-content">
                 View Profile
-              </button>
+              </Link >
             </div>
           </div>
         </div>

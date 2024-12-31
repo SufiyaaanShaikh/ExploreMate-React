@@ -15,6 +15,7 @@ import { AuthProvider } from "./context/AuthContext"; // Import AuthProvider
 import SingleReview from "./components/Review/SingleReview";
 import Profile from "./pages/Profile";
 import EditProfile from "./pages/EditProfile";
+import UserProfile from "./pages/UserProfile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -50,6 +51,10 @@ let allRoutes = createBrowserRouter([
   {
     path: "edit-profile",
     element: <EditProfile />,
+  },
+  {
+    path: "/user-profile",
+    element: <UserProfile />,
   },
 ]);
 
