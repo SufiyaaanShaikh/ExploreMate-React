@@ -37,6 +37,10 @@ let allRoutes = createBrowserRouter([
     element: <Feed />,
   },
   {
+    path: "/feed/:username",
+    element: <UserProfile />,
+  },
+  {
     path: "/review",
     element: <Review />,
   },
@@ -52,10 +56,10 @@ let allRoutes = createBrowserRouter([
     path: "edit-profile",
     element: <EditProfile />,
   },
-  {
-    path: "/user-profile",
-    element: <UserProfile />,
-  },
+  // {
+  //   path: "/user-profile",
+  //   element: <UserProfile />,
+  // },
 ]);
 
 root.render(
