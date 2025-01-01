@@ -6,9 +6,11 @@ import { motion } from "framer-motion";
 
 function FeedContainer() {
   const [destinationSearch, setDestinationSearch] = useState([]); // State to store search results
+  const [searchQuery, setSearchQuery] = useState(""); // Track search query
 
   const handleSearch = (e) => {
     const searchValue = e.target.value.toLowerCase();
+    setSearchQuery(searchValue); // Update search query state
     const filteredDestinations = usersData.filter((destination) => {
       return destination.address.city.toLowerCase().includes(searchValue);
     });
@@ -35,6 +37,7 @@ function FeedContainer() {
                 type="text"
                 id="feedSearch"
                 placeholder="Destination"
+                autoComplete="off"
               />
             </div>
             <h2 className="text-center fw-500 feedHeading">Travel Feed</h2>
@@ -42,16 +45,16 @@ function FeedContainer() {
           <motion.div
             id="feedContainer"
             className={`container ${
-              destinationSearch.length === 0 ? "flex" : "grid"
-            }  grid-4`}
+              destinationSearch.length === 0 && searchQuery ? "flex" : "grid"
+            } grid-4`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }} // Animation for fade-in of container
             key={destinationSearch.length} // Change key to force animation when search changes
           >
-            {destinationSearch.length === 0 ? (
-              <p class="notFound f-16 text-center fw-500 mx-auto">
+            {destinationSearch.length === 0 && searchQuery ? (
+              <p className="notFound f-16 text-center fw-500 mx-auto">
                 No Users Found in this City
               </p> // Display message if no search results
             ) : (

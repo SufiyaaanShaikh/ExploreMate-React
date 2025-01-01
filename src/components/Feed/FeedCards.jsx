@@ -14,7 +14,7 @@ function FeedCards({ filteredDestinations }) {
   const isHomePage = location.pathname === "/";
 
   const [displayedUsers, setDisplayedUsers] = useState([]); // Users to display
-  const { following, toggleFollow } = useContext(AuthContext); // Access context for follow state and logic
+  const { following, toggleFollow, user } = useContext(AuthContext); // Access context for follow state and logic
 
   useEffect(() => {
     // Check if filteredDestinations exists, if not fall back to usersData
@@ -71,7 +71,13 @@ function FeedCards({ filteredDestinations }) {
                     ? "bg-transparent text-zinc-800"
                     : "bg-zinc-900 text-white"
                 }`}
-                onClick={() => handleFollow(user)}
+                onClick={() => {
+                  if (user) {
+                    handleFollow(user);
+                  } else {
+                    toast.error("Please create an account to follow.");
+                  }
+                }}
               >
                 {isFollowing ? "Unfollow" : "Follow"}
               </button>
