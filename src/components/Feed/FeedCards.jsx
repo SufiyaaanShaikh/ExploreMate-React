@@ -28,28 +28,32 @@ function FeedCards({ filteredDestinations }) {
     setDisplayedUsers(usersToDisplay); // Update displayed users
   }, [isHomePage, filteredDestinations]); // Update when filteredDestinations changes
 
-  const handleFollow = (user) => {
-    const isNowFollowing = toggleFollow(user.id);
+  const handleFollow = (userToFollow) => {
+    // Check if user is logged in
+    if (!user) {
+      toast.error("Please create an account to follow.");
+      return;
+    }
+
+    const isNowFollowing = toggleFollow(userToFollow.id);
     console.log(
-      `User with ID ${user.id} is now ${
-        isNowFollowing ? "followed" : "unfollowed"
-      }`
+      `User with ID ${userToFollow.id} is now ${isNowFollowing ? "followed" : "unfollowed"}`
     );
     const message = isNowFollowing
-      ? `You are now following ${user.name}`
-      : `You unfollowed ${user.name}`;
+      ? `You are now following ${userToFollow.name}`
+      : `You unfollowed ${userToFollow.name}`;
     toast(message, { icon: isNowFollowing ? "👏" : "❌" });
   };
 
   return (
     <>
-      {displayedUsers.map((user, index) => {
-        const isFollowing = following[user.id] || false; // Check follow state for this user
+      {displayedUsers.map((userToFollow, index) => {
+        const isFollowing = following[userToFollow.id] || false; // Check follow state for this user
 
         return (
           <motion.div
             className="card grid"
-            key={user.id}
+            key={userToFollow.id}
             initial={{ opacity: 0, y: 20 }} // Cards slide in from below
             animate={{ opacity: 1, y: 0 }} // Cards slide into place
             exit={{ opacity: 0, y: -20 }} // Cards fade out and slide out
@@ -71,37 +75,31 @@ function FeedCards({ filteredDestinations }) {
                     ? "bg-transparent text-zinc-800"
                     : "bg-zinc-900 text-white"
                 }`}
-                onClick={() => {
-                  if (user) {
-                    handleFollow(user);
-                  } else {
-                    toast.error("Please create an account to follow.");
-                  }
-                }}
+                onClick={() => handleFollow(userToFollow)} // Passing the current user
               >
                 {isFollowing ? "Unfollow" : "Follow"}
               </button>
             </div>
             <div className="content">
               <div className="title">
-                <h3 className="fw-500">{user.name}</h3>
+                <h3 className="fw-500">{userToFollow.name}</h3>
               </div>
               <div className="detail flex items-center">
                 <img src={cityIcon} alt="locals" />
-                <p className="para-c para-f">{user.address.city}</p>
+                <p className="para-c para-f">{userToFollow.address.city}</p>
               </div>
               <div className="detail flex items-center">
                 <img src={calendarIcon} alt="calendar" />
-                <p className="para-c para-f">{user.timeAgo}</p>
+                <p className="para-c para-f">{userToFollow.timeAgo}</p>
               </div>
               <div className="detail flex items-center">
                 <img src={groupIcon} alt="group" />
-                <p className="para-c para-f">{user.group}</p>
+                <p className="para-c para-f">{userToFollow.group}</p>
               </div>
               <div className="view">
                 <Link
-                  to={`/feed/${user.id}`}
-                  className="viewProfileBtn flex items-center justify-content "
+                  to={`/feed/${userToFollow.id}`}
+                  className="viewProfileBtn flex items-center justify-content"
                 >
                   View Profile
                 </Link>
