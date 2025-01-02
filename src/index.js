@@ -13,6 +13,9 @@ import Review from "./pages/Review";
 import { Toaster } from "react-hot-toast";
 import { AuthProvider } from "./context/AuthContext"; // Import AuthProvider
 import SingleReview from "./components/Review/SingleReview";
+import Profile from "./pages/Profile";
+import EditProfile from "./pages/EditProfile";
+import UserProfile from "./pages/UserProfile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -34,13 +37,29 @@ let allRoutes = createBrowserRouter([
     element: <Feed />,
   },
   {
+    path: "/feed/:username",
+    element: <UserProfile />,
+  },
+  {
     path: "/review",
     element: <Review />,
   },
   {
     path: "/single-review",
-    element: <SingleReview/>,
+    element: <SingleReview />,
   },
+  {
+    path: "/profile",
+    element: <Profile />,
+  },
+  {
+    path: "edit-profile",
+    element: <EditProfile />,
+  },
+  // {
+  //   path: "/user-profile",
+  //   element: <UserProfile />,
+  // },
 ]);
 
 root.render(

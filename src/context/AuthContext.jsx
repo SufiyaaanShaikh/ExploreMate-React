@@ -5,18 +5,22 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [following, setFollowing] = useState({}); // Track following state
 
   useEffect(() => {
-    // Check local storage on initial load
+    // Load user and following data from localStorage
     const storedUser = {
       name: localStorage.getItem("name"),
       email: localStorage.getItem("email"),
       password: localStorage.getItem("password"),
     };
+    const storedFollowing = JSON.parse(localStorage.getItem("following")) || {};
+
     if (storedUser.email) {
       setUser(storedUser);
-      setIsLoggedIn(true); // Set logged-in status
+      setIsLoggedIn(true);
     }
+    setFollowing(storedFollowing);
   }, []);
 
   const signup = (name, email, password) => {
@@ -32,7 +36,7 @@ export const AuthProvider = ({ children }) => {
       password === localStorage.getItem("password")
     ) {
       setUser({ name: localStorage.getItem("name"), email, password });
-      setIsLoggedIn(true); // User is logged in after successful login
+      setIsLoggedIn(true);
       return true;
     }
     return false;
@@ -40,11 +44,30 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     setUser(null);
-    localStorage.clear(); // User is logged out
+    localStorage.clear();
+    setFollowing({});
+  };
+
+  const toggleFollow = (userId) => {
+    const isFollowing = following[userId] || false;
+    const updatedFollowing = { ...following, [userId]: !isFollowing };
+    setFollowing(updatedFollowing);
+    localStorage.setItem("following", JSON.stringify(updatedFollowing));
+    return !isFollowing; // Return the updated follow state
   };
 
   return (
-    <AuthContext.Provider value={{ user, isLoggedIn, signup, login, logout }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        isLoggedIn,
+        signup,
+        login,
+        logout,
+        following,
+        toggleFollow,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
