@@ -17,23 +17,23 @@ const destinations = [
 // Main Banner Component
 function Banner() {
   return (
-    <section id="main" className="vh-100 position">
-      <div className="sec flex vh-100">
-        <h1 className="fw-700 heading">Journey with Like-Minded Explorers.</h1>
-        <div className="main-search flex items-center">
-          <img src={SearchIcon} alt="search" className="invert" />
+    <section id="main" className="vh-100 bg-white position">
+      <div className="sec main-container  vh-100">
+        <div className="left flex pt-32">
+          <h1 className="text-zinc-800 text-5xl/[55px] font-semibold ">Journey with Like-Minded Explorers.</h1>
+          <p className="text-gray-500 text-sm w-3/4 mt-6"> Discover unique destinations, connect with fellow travelers, and create unforgettable memories with ExploreMates.</p>
+          <div className="main-search flex items-center">
+          <img src={SearchIcon} alt="search" className="" />
           <input
             id="searchInput"
             type="text"
             placeholder="Search Destinations"
-            className="w-100"
+            className="w-100 text-zinc-800 placeholder:text-zinc-800"
             autoComplete="off"
           />
         </div>
-        <div className="main-vac">
-          <h3 className="fw-700">Top Vacation Destinations</h3>
-          <SliderContainer destinations={destinations} />
         </div>
+        <div className="right"></div>
       </div>
     </section>
   );

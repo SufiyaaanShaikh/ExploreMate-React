@@ -10,10 +10,10 @@ const SliderContainer = ({ destinations }) => {
     dots: true,
     infinite: true,
     centerMode: true,
-    centerPadding: "0px",
-    slidesToShow: 3,
+    centerPadding: "90px",
+    slidesToShow: 1,
     variableWidth: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
       {

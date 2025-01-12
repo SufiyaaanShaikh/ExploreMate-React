@@ -11,7 +11,7 @@ function Footer() {
       <footer className="w-100">
         <div className="sec flex pad">
           <div className="footer-column w-100 flex">
-            <div className="block footer-logo flex">
+            <div className="footer-block footer-logo flex">
               <Link to="#" className="">
                 <img src={images("./Explore.svg")} alt="logo" />
               </Link>
@@ -57,7 +57,7 @@ function Footer() {
                 </div>
               </div>
             </div>
-            <div className="block">
+            <div className="footer-block">
               <h3 className="fw-500">Pages</h3>
               <Link to="/review" className="link para-c flex">
                 Review
@@ -72,7 +72,7 @@ function Footer() {
                 Destination
               </Link>
             </div>
-            <div className="block">
+            <div className="footer-block">
               <h3 className="fw-500">Legal</h3>
               <Link to="#" className="link para-c flex">
                 Terms
@@ -87,42 +87,46 @@ function Footer() {
                 Help Centre
               </Link>
             </div>
-            <div className="block social-block">
+            <div className="footer-block social-block">
               <h3 className="fw-500">Socials</h3>
               <div className="card">
                 <Link to="#" className="social">
-                  <img
+                  {/* <img
                     src={images("./instagram.svg")}
                     alt="social-icon"
                     className="invert"
-                  />
+                  /> */}
+                  <span className="link para-c flex">Instagram</span>
                 </Link>
               </div>
               <div className="card">
                 <Link to="#" className="social">
-                  <img
+                  {/* <img
                     src={images("./twitter.svg")}
                     alt="social-icon"
                     className="invert"
-                  />
+                  /> */}
+                  <span className="link para-c flex">Twitter</span>
                 </Link>
               </div>
               <div className="card">
                 <Link to="#" className="social">
-                  <img
+                  {/* <img
                     src={images("./linkedin.svg")}
                     alt="social-icon"
                     className="invert"
-                  />
+                  /> */}
+                  <span className="link para-c flex">LinkedIn</span>
                 </Link>
               </div>
               <div className="card">
                 <Link to="#" className="social">
-                  <img
+                  {/* <img
                     src={images("./youtube.svg")}
                     alt="social-icon"
                     className="invert"
-                  />
+                  /> */}
+                  <span className="link para-c flex">YouTube</span>
                 </Link>
               </div>
             </div>
