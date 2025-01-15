@@ -22,13 +22,13 @@ function Banner() {
         <div className="left flex pt-32">
           <h1 className="text-zinc-800 text-5xl/[55px] font-semibold ">Journey with Like-Minded Explorers.</h1>
           <p className="text-gray-500 text-sm w-3/4 mt-6"> Discover unique destinations, connect with fellow travelers, and create unforgettable memories with ExploreMates.</p>
-          <div className="main-search flex items-center">
+          <div className="main-search flex items-center bg-gray-100">
           <img src={SearchIcon} alt="search" className="" />
           <input
             id="searchInput"
             type="text"
             placeholder="Search Destinations"
-            className="w-100 text-zinc-800 placeholder:text-zinc-800"
+            className="w-100 bg-gray-100 text-zinc-800 placeholder:text-zinc-800"
             autoComplete="off"
           />
         </div>
