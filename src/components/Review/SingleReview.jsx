@@ -1,9 +1,11 @@
 import React from "react";
 import mumbai from "../../images/mumbai.jpg";
+import Header from "../Header";
 
 function SingleReview() {
   return (
     <>
+      <Header />
       {/* <!-- Main start  --> */}
       <section id="single-r" class="">
         <div class="sec">

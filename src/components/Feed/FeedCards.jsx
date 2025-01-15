@@ -22,7 +22,7 @@ function FeedCards({ filteredDestinations }) {
       filteredDestinations && filteredDestinations.length > 0
         ? filteredDestinations
         : isHomePage
-        ? usersData.slice(0, 4) // Display first 4 users on home page
+        ? usersData.slice(0, 6) // Display first 4 users on home page
         : usersData;
 
     setDisplayedUsers(usersToDisplay); // Update displayed users

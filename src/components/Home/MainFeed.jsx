@@ -29,7 +29,7 @@ const MainFeed = () => {
         />
         <div
           id="feedContainer"
-          className="container grid grid-4 main-feedContainer"
+          className="container flex justify-center flex-wrap main-feedContainer"
         >
           <FeedCards/>
         </div>

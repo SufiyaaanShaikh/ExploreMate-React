@@ -49,6 +49,28 @@ const reviewData = [
       "Mumbai, often known as the City of Dreams, offers a rich and diverse experience that captivated me during a recent city tour. The journey began at the iconic Gateway of India, a majestic colonial-era monument that stands proudly overlooking the Arabian Sea.",
     link: "/single-review",
   },
+  {
+    id: 5,
+    imgName: "varanasi.jpg",
+    altText: "varanasi",
+    title: "Varanasi",
+    location: "Varanasi, Uttar Pradesh",
+    rating: 7.5,
+    description:
+      "Mumbai, often known as the City of Dreams, offers a rich and diverse experience that captivated me during a recent city tour. The journey began at the iconic Gateway of India, a majestic colonial-era monument that stands proudly overlooking the Arabian Sea.",
+    link: "/single-review",
+  },
+  {
+    id: 6,
+    imgName: "varanasi.jpg",
+    altText: "varanasi",
+    title: "Varanasi",
+    location: "Varanasi, Uttar Pradesh",
+    rating: 7.5,
+    description:
+      "Mumbai, often known as the City of Dreams, offers a rich and diverse experience that captivated me during a recent city tour. The journey began at the iconic Gateway of India, a majestic colonial-era monument that stands proudly overlooking the Arabian Sea.",
+    link: "/single-review",
+  },
 ];
 
 function MainReview() {
@@ -76,7 +98,7 @@ export default MainReview;
 const Cards = ({ reviewData }) => {
   return (
     <>
-      <div className="container grid grid-4">
+      <div className="container flex justify-center	flex-wrap">
         {reviewData.map((review) => (
           <div className="card grid" key={review.id}>
             <Link to={review.link}>

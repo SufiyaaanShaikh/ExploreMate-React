@@ -9,7 +9,7 @@ function FeedContainer() {
   const [searchQuery, setSearchQuery] = useState(""); // Track search query
 
   const handleSearch = (e) => {
-    const searchValue = e.target.value.toLowerCase();
+    const searchValue = e.target.value.toLowerCase().trim();
     setSearchQuery(searchValue); // Update search query state
     const filteredDestinations = usersData.filter((destination) => {
       return destination.address.city.toLowerCase().includes(searchValue);
@@ -44,9 +44,7 @@ function FeedContainer() {
           </div>
           <motion.div
             id="feedContainer"
-            className={`container ${
-              destinationSearch.length === 0 && searchQuery ? "flex" : "grid"
-            } grid-4`}
+            className="container flex flex-wrap justify-center	"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
