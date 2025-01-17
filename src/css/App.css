@@ -968,9 +968,13 @@ footer .sec {
 
 .write-review .right form .review-input-block input {
   border: 1px solid #b4b4b4;
+  font-size: 14px;
   padding: 10px;
   height: 4.5em;
   border-radius: 10px;
+}
+.write-review .right form .review-input-block input::placeholder {
+  font-size: 14px;
 }
 
 .write-review .right form .review-input-block:nth-child(1) {
@@ -992,9 +996,13 @@ footer .sec {
 .write-review .right form .review-input-block textarea {
   border: 1px solid #b4b4b4;
   resize: none;
+  font-size: 14px;
   padding: 10px;
   height: 6em;
   border-radius: 10px;
+}
+.write-review .right form .review-input-block textarea::placeholder {
+  font-size: 14px;
 }
 
 .write-review .right form button {
