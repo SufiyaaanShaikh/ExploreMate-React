@@ -728,7 +728,6 @@ header nav a:hover {
 
 .feedHeading {
   font-size: 18px;
-  margin-top: 15px;
 }
 
 /* Footer  */
@@ -1484,10 +1483,6 @@ form .resetPwd {
 
   #hero .sec {
     padding: 0 1em;
-  }
-
-  #main .main-search {
-    margin-top: 1.5em;
   }
 
   #main-how .container .card {
