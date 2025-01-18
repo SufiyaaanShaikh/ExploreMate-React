@@ -12,9 +12,14 @@ function UserProfile() {
   const currentId = location.pathname.split("/")[2];
   const currentData = usersData.find((v) => v.id == currentId);
 
-  const { toggleFollow, following } = useContext(AuthContext);
+  const { toggleFollow, following, user } = useContext(AuthContext);
 
   const handleFollow = () => {
+      // Check if user is logged in
+      if (!user) {
+        toast.error("Please create an account to follow.");
+        return;
+      }
     if (currentData) {
       const isNowFollowing = toggleFollow(currentId);
       const message = isNowFollowing
