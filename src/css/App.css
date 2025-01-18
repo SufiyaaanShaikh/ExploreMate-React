@@ -261,50 +261,36 @@ header nav a:hover {
 }
 
 /* Slick slider CSS  */
-
-.slick-list {
-  overflow: visible !important;
+.slide-container {
+  width: 500px;
+  height: 500px;
 }
 
-.slick-arrow {
-  display: none !important;
+.slick-slider {
+  height: 100%;
 }
 
-.slick-dots {
-  position: absolute;
-  bottom: 0px;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  z-index: 1;
-  gap: 15px;
-  align-items: center;
+.slide {
+  height: 468px;
 }
 
-.slick-dots li button::before {
-  color: #fff !important;
-  font-size: 14px;
-  /* Adjust size as needed */
+.slick-slide>div {
+  margin: 0 10px;
 }
+.slick-arrow::before  {
+  color: #000 !important;
 
-.slick-dots li.slick-active button::before {
-  color: rgb(45, 104, 248) !important;
 }
-
-/* .slick-dots li button {
-    display: none !important;
-} */
-
-.slick-track {
-  display: flex !important;
-  gap: 20px;
+.slick-dots li button:before {
+  font-size: 11px !important;
+  color: #abb3ff !important;
 }
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  padding: 0px 40px;
+.slick-dots li.slick-active button:before {
+  color: #003dde !important;
 }
-
+.slick-dots li {
+  width: 10px !important;
+}
 /* Banner  */
 
 #main {
@@ -369,6 +355,9 @@ header nav a:hover {
   height: 0.9em;
 }
 
+
+
+/* 
 #main .main-vac {
   padding-bottom: 2em;
   margin-top: 2em;
@@ -428,6 +417,7 @@ header nav a:hover {
   left: 9px;
   z-index: 4;
 }
+ */
 
 /* How it Works  */
 #main-how {
@@ -603,7 +593,8 @@ header nav a:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   margin-bottom: 26em;
   border-radius: 0 0 30px 30px;
-  background: linear-gradient(360deg, #f8f9ff, #dee7ff);
+  /* background: linear-gradient(360deg, #f8f9ff, #dee7ff); */
+  background: #fff;
 }
 
 #main-feed .sec {
@@ -972,6 +963,7 @@ footer .sec {
   height: 4.5em;
   border-radius: 10px;
 }
+
 .write-review .right form .review-input-block input::placeholder {
   font-size: 14px;
 }
@@ -1000,6 +992,7 @@ footer .sec {
   height: 6em;
   border-radius: 10px;
 }
+
 .write-review .right form .review-input-block textarea::placeholder {
   font-size: 14px;
 }
@@ -1492,6 +1485,7 @@ form .resetPwd {
   #main-review .container .card {
     flex-grow: 1;
   }
+
   #main-feed .container .card {
     flex-grow: 1;
   }

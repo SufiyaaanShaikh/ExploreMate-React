@@ -37,7 +37,7 @@ export let usersData = [
     id: 2,
     username: "BHOOM",
     name: "Bhoomi Gupta",
-    bio: "Main speaker of the BHOOMS Group",
+    bio: "Nallii berozgaar awaara , a passionate foodie who loves to explore new cuisines.",
     address: {
       street: "22 Palace Road",
       suite: "Flat 5A",

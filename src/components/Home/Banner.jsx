@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SearchInputBox from "../Feed/SearchInputBox";
+import SliderContainer from "./SliderContainer";
 
 function Banner() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -20,7 +21,7 @@ function Banner() {
   return (
     <section id="main" className="vh-100 bg-white position">
       <div className="sec main-container vh-100">
-        <div className="left flex pt-32">
+        <div className="left flex">
           <h1 className="text-zinc-800 text-5xl/[55px] font-semibold">
             Journey with Like-Minded Explorers.
           </h1>
@@ -34,7 +35,9 @@ function Banner() {
             onSubmit={handleSubmit} // Trigger navigation
           />
         </div>
-        <div className="right"></div>
+        <div className="right grid place-items-center">
+          <SliderContainer />
+        </div>
       </div>
     </section>
   );

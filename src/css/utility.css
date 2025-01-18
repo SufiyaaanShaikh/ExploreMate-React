@@ -62,20 +62,12 @@
     filter: invert(1);
 }
 
-.flex {
-    display: flex;
-}
-
 .justify-content {
     justify-content: center;
 }
 
 .items-center {
     align-items: center;
-}
-
-.grid {
-    display: grid;
 }
 
 .text-center {
