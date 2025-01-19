@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import FeedCards from "./FeedCards";
 import usersData from "../../Data/usersData";
 import { motion } from "framer-motion";
@@ -9,6 +9,7 @@ function FeedContainer() {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const initialQuery = queryParams.get("query") || ""; // Get query from URL
+  const navigate = useNavigate();
 
   const [destinationSearch, setDestinationSearch] = useState([]);
   const [searchQuery, setSearchQuery] = useState(initialQuery); // Initialize with URL query
@@ -29,6 +30,7 @@ function FeedContainer() {
     const filteredDestinations = usersData.filter((user) =>
       user.address.city.toLowerCase().includes(searchQuery.toLowerCase().trim())
     );
+    navigate(`/feed?query=${searchQuery.trim()}`);
     setDestinationSearch(filteredDestinations);
   }, [searchQuery]); // Re-run when searchQuery changes
 
@@ -67,6 +69,11 @@ function FeedContainer() {
             <FeedCards filteredDestinations={destinationSearch} />
           )}
         </motion.div>
+      <div className="view-all mx-auto text-center flex">
+          <button className="btn fw-500 para-f">
+            View More
+          </button>
+        </div>
       </div>
     </motion.section>
   );

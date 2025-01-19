@@ -583,7 +583,7 @@ header nav a:hover {
   margin-top: 3.5em;
 }
 
-.view-all a {
+.view-all .btn {
   padding: 15px 3em;
   border-radius: 10px;
   background: #000;
@@ -592,7 +592,7 @@ header nav a:hover {
   transition: all 0.2s ease-in-out;
 }
 
-.view-all a:hover {
+.view-all .btn:hover {
   opacity: 0.8;
 }
 
@@ -1758,6 +1758,7 @@ form .resetPwd {
   /* Review  */
   #review-head .sec {
     min-height: fit-content;
+    padding: 0 1em;
   }
   /* Feed  */
   .feedSearchBox,
@@ -1788,7 +1789,7 @@ form .resetPwd {
   }
 
   #review-head form {
-    width: 80%;
+    width: 100%;
     padding: 10px;
   }
 
