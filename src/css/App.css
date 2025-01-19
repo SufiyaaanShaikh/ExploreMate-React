@@ -446,6 +446,7 @@ header nav a:hover {
   background: #fff;
   height: 17em;
   width: 17em;
+  transition: all 0.2s ease-in-out;
 }
 
 #main-how .container .card:hover {
@@ -493,6 +494,7 @@ header nav a:hover {
 
 #main-review .container .img-block {
   border-radius: 15px;
+  transition: all 0.2s ease-in-out;
 }
 
 #main-review .container .img-block:hover {
@@ -587,6 +589,7 @@ header nav a:hover {
   background: #000;
   color: #fff;
   display: inline-block;
+  transition: all 0.2s ease-in-out;
 }
 
 .view-all a:hover {
@@ -595,10 +598,10 @@ header nav a:hover {
 
 /* Feed  */
 #main-feed {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  box-shadow: 0 14.5px 29.5px -5px rgba(149, 157, 165, 0.2);
   margin-bottom: 26em;
   border-radius: 0 0 30px 30px;
-  /* background: linear-gradient(360deg, #f8f9ff, #dee7ff); */
   background: #fff;
 }
 
@@ -682,7 +685,7 @@ header nav a:hover {
   padding: 10px 20px;
   width: 100%;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .viewProfileBtn:hover {
@@ -824,21 +827,22 @@ footer .sec {
 /* Review Page  */
 #review {
   margin-bottom: 26em;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  box-shadow: 0 14.5px 29.5px -5px rgba(149, 157, 165, 0.2);
   background: #fff;
+  border-radius: 0 0 30px 30px;
   padding-bottom: 2em;
 }
 
 #review-head .sec {
   flex-direction: column;
   gap: 2.5em;
-  min-height: 40vh;
+  min-height: 35vh;
   margin-top: 7em;
 }
 
 #review-head h1 {
   width: 80%;
-  line-height: 65px;
   text-align: center;
 }
 
@@ -851,7 +855,6 @@ footer .sec {
 }
 
 #review-head form input {
-  border-radius: 10px;
   font-size: 16px;
 }
 
@@ -860,7 +863,6 @@ footer .sec {
 }
 
 #review-head form button {
-  cursor: pointer;
   background: unset;
   opacity: 0.5;
 }
@@ -872,7 +874,7 @@ footer .sec {
 
 #review .title {
   justify-content: space-between;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 
 #review .title .heading {
@@ -888,7 +890,7 @@ footer .sec {
 }
 
 #review .title .write img {
-  height: 18px;
+  height: 14px;
   opacity: 0.7;
 }
 
@@ -910,7 +912,7 @@ footer .sec {
 }
 
 #review .review-container .review-block {
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 40% 50%;
   gap: 3em;
 }
 
@@ -932,11 +934,12 @@ footer .sec {
 /* Write Review  */
 .write-review {
   grid-template-columns: 50% 50%;
+  gap: 15px;
 }
 
 .write-review .left .review-photo {
   height: 400px;
-  width: 500px;
+  width: 100%;
 }
 
 .write-review .left .review-photo img {
@@ -963,14 +966,13 @@ footer .sec {
 
 .write-review .right form .review-input-block input {
   border: 1px solid #b4b4b4;
-  font-size: 14px;
-  padding: 10px;
-  height: 4.5em;
+  font-size: 12px;
+  padding: 20px 10px;
   border-radius: 10px;
 }
 
 .write-review .right form .review-input-block input::placeholder {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .write-review .right form .review-input-block:nth-child(1) {
@@ -992,19 +994,18 @@ footer .sec {
 .write-review .right form .review-input-block textarea {
   border: 1px solid #b4b4b4;
   resize: none;
-  font-size: 14px;
+  font-size: 12px;
   padding: 10px;
   height: 6em;
   border-radius: 10px;
 }
 
 .write-review .right form .review-input-block textarea::placeholder {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .write-review .right form button {
   grid-area: 5 / 1 / 6 / 2;
-  cursor: pointer;
   font-size: 12px;
   color: #fff;
   background: #000;
@@ -1013,7 +1014,6 @@ footer .sec {
   border: 1px solid #000;
   font-weight: 500;
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-  width: 200px;
 }
 
 .write-review .right form button:active {
@@ -1543,7 +1543,9 @@ form .resetPwd {
   /* Feed  */
 
   /* review  */
-
+  #review .review-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
   #review .review-container .review-block {
     display: flex;
     flex-direction: column;
@@ -1605,21 +1607,21 @@ form .resetPwd {
   /* How it Works  */
 
   /* Review  */
-
+  #review {
+    margin-bottom: unset;
+  }
   #main-review .container {
     gap: 1em;
     margin-top: 2em;
-  }
-
-  #review-head .sec {
-    min-height: 35vh;
   }
 
   #review-head form input,
   #review-head form input::placeholder {
     font-size: 14px;
   }
-
+  #review .review-container {
+    grid-template-columns: repeat(1,1fr);
+  }
   /* Feed  */
   #main-feed {
     margin-bottom: 0;
@@ -1635,9 +1637,6 @@ form .resetPwd {
   }
 
   /* review Page  */
-  #review-head h1 {
-    line-height: 45px;
-  }
 
   #review-head form {
     width: 70%;
@@ -1757,7 +1756,9 @@ form .resetPwd {
   }
 
   /* Review  */
-
+  #review-head .sec {
+    min-height: fit-content;
+  }
   /* Feed  */
   .feedSearchBox,
   .feedSearchBox:focus-within {
