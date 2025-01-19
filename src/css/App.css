@@ -1254,7 +1254,10 @@ footer .sec {
   text-align: center;
   display: block;
   margin: auto;
-  max-width: 500px;
+  max-width: fit-content;
+  padding: 0 15px;
+  border: 1px solid rgb(229 231 235) ;
+  border-radius: 50px;
 }
 
 .tabs {
@@ -1267,10 +1270,10 @@ footer .sec {
 .tab-link {
   margin: 0 1%;
   list-style: none;
-  padding: 10px 40px;
+  padding: 10px 30px;
   color: #000;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 600;
   transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
   border-bottom: solid 3px rgba(255, 255, 255, 0);
   letter-spacing: 1px;
@@ -1290,15 +1293,13 @@ footer .sec {
   padding: 40px 80px;
 }
 
-
-
 .tab-content.active {
   display: block;
 }
 
-.tab-content .tab-block {
+.tab-content .tab-block .followers-container{
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .tab-content .tab-block .card {
@@ -1310,6 +1311,8 @@ footer .sec {
   display: grid;
   place-content: center;
 }
+
+
 
 @keyframes fadeIn {
   100% {

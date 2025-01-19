@@ -4,8 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import toast from "react-hot-toast";
 import AuthContext from "../context/AuthContext";
 import SpringModal from "../components/Home/SpringModal";
-import TabsNavigation from "../components/Profile/TabsNavigation";
-import TabContent from "../components/Profile/TabContent";
+import TabsNavigation from "../components/EditProfile/TabsNavigation";
+import TabContent from "../components/EditProfile/TabContent";
 import Header from "../components/Header";
 
 function EditProfile() {

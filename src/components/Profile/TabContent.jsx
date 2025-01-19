@@ -1,17 +1,22 @@
 import React from "react";
-import ProfileForm from "./ProfileForm";
-import PasswordForm from "./PasswordForm";
-import HelpSupport from "./HelpSupport";
+import { AnimatePresence, motion } from "framer-motion";
 
-const TabContent = ({ activeTab }) => {
-  const tabContent = {
-    tab1: <ProfileForm />,
-    tab2: <PasswordForm />,
-    tab3: <HelpSupport />,
-    tab4: <></>,
-  };
-
-  return <div>{tabContent[activeTab]}</div>;
-};
+function TabContent({ activeTab, tabContent }) {
+  return (
+    <div className="content-wrapper sec">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.2 }}
+        >
+          {tabContent[activeTab]}
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export default TabContent;
