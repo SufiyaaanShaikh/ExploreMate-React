@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import userIcon from "../images/user.webp";
@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 function Profile() {
   const { user } = useContext(AuthContext);
   const [activeTab, setActiveTab] = useState("tab1");
+  const [profileImage, setProfileImage] = useState(userIcon);
 
   const tabs = [
     { id: "tab1", label: "Trip" },
@@ -82,6 +83,13 @@ function Profile() {
     ),
   };
 
+  useEffect(() => {
+    const storedImage = localStorage.getItem("profilePhoto");
+    if (storedImage) {
+      setProfileImage(storedImage);
+    }
+  }, []);
+
   return (
     <>
       <Header />
@@ -91,7 +99,7 @@ function Profile() {
           <div className="profile-block">
             <div className="container flex items-center">
               <div className="profile-pic">
-                <img src={userIcon} alt="user-image" className="w-100 h-100" />
+                <img src={profileImage} alt="user-image" className="w-100 h-100" />
                 <Link to="/edit-profile" className="edit-icon grid">
                   <img src={editIcon} alt="edit-icon" title="Edit" />
                 </Link>

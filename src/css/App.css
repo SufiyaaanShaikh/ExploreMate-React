@@ -277,20 +277,25 @@ header nav a:hover {
 .slick-slide>div {
   margin: 0 10px;
 }
-.slick-arrow::before  {
+
+.slick-arrow::before {
   color: #000 !important;
 
 }
+
 .slick-dots li button:before {
   font-size: 11px !important;
   color: #abb3ff !important;
 }
+
 .slick-dots li.slick-active button:before {
   color: #003dde !important;
 }
+
 .slick-dots li {
   width: 10px !important;
 }
+
 /* Banner  */
 
 #main {
@@ -1522,14 +1527,13 @@ form .resetPwd {
   }
 
   /* Banner  */
-
-  .container {
-    grid-template-columns: repeat(2, 1fr);
+  .main-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .main-container .left {
+    margin-top: 7em;
   }
 
-  #main .main-vac .container .block {
-    width: 260px !important;
-  }
 
   /* How it Works  */
 
@@ -1740,31 +1744,10 @@ form .resetPwd {
     height: unset;
   }
 
-  #main h1 {
-    padding-top: 4em;
-  }
-
-  #main .main-vac {
-    margin-top: 3em;
-    padding-bottom: unset;
-  }
-
-  #main .main-vac .container {
-    margin-top: 0em;
-    padding: 1em 0em 2em 0em !important;
-  }
-
   #main .main-search {
     width: 100%;
   }
 
-  #main .main-vac h3 {
-    font-size: 20px;
-  }
-
-  #main .main-vac .container .block h4 {
-    font-size: 14px;
-  }
 
   /* How it works  */
 
