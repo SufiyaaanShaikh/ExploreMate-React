@@ -1,5 +1,6 @@
 import React from "react";
 import penIcon from "../../images/pen.svg";
+import { MdCancel } from "react-icons/md";
 
 const TopPlaces = ({ writeReview, setWriteReview }) => (
   <div className="title flex items-center">
@@ -15,9 +16,9 @@ const TopPlaces = ({ writeReview, setWriteReview }) => (
     </div>
     <button
       onClick={() => setWriteReview(!writeReview)}
-      className="write flex justify-content items-center"
+      className="write flex justify-content items-center group"
     >
-      {writeReview ? "" : <img src={penIcon} alt="pen" />}
+      {writeReview ? <MdCancel className="group-hover:invert h-4"/> : <img src={penIcon} alt="pen" />}
 
       <p className="para-c para-f">
         {writeReview ? "Cancel" : "Write a review"}

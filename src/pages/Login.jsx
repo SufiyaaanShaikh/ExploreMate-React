@@ -32,7 +32,7 @@ const Login = () => {
 
   return (
     <section id="hero" className="grid vh-100 w-100">
-      <div className="login-left"></div>
+      <div className="login-left left"></div>
       <div className="right h-100 w-100 flex justify-content">
         <div className="sec">
           <FormHedaing

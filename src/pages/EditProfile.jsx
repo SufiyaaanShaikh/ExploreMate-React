@@ -4,8 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import toast from "react-hot-toast";
 import AuthContext from "../context/AuthContext";
 import SpringModal from "../components/Home/SpringModal";
-import TabsNavigation from "../components/Profile/TabsNavigation";
-import TabContent from "../components/Profile/TabContent";
+import TabsNavigation from "../components/EditProfile/TabsNavigation";
+import TabContent from "../components/EditProfile/TabContent";
 import Header from "../components/Header";
 
 function EditProfile() {
@@ -33,7 +33,7 @@ function EditProfile() {
     <>
       <Header />
       <div className="my-28 bg-white">
-        <div className="sec vh-70 grid grid-cols-1 rounded-lg p-6 shadow-lg md:grid-cols-3 gap-6">
+        <div className="sec vh-70 grid grid-cols-1 rounded-lg p-6 md:grid-cols-3 gap-6">
           <TabsNavigation tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} user={user} />
           <div className="col-span-2">
             <AnimatePresence mode="wait">
