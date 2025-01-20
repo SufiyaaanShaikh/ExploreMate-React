@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [following, setFollowing] = useState({}); // Track following state
-
+  const [isFormDirty, setIsFormDirty] = useState(false); // Track form modification
   useEffect(() => {
     // Load user and following data from localStorage
     const storedUser = {
@@ -66,6 +66,8 @@ export const AuthProvider = ({ children }) => {
         logout,
         following,
         toggleFollow,
+        isFormDirty,
+        setIsFormDirty,
       }}
     >
       {children}

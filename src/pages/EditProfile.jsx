@@ -1,3 +1,4 @@
+// EditProfile Component
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
@@ -10,7 +11,7 @@ import Header from "../components/Header";
 
 function EditProfile() {
   const [activeTab, setActiveTab] = useState("tab1");
-  const { logout, user } = useContext(AuthContext);
+  const { logout, user, isFormDirty } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -24,6 +25,8 @@ function EditProfile() {
   const handleTabChange = (tabId) => {
     if (tabId === "tab4") {
       setIsOpen(true);
+    } else if (isFormDirty) {
+      toast.error("First save the changes!");
     } else {
       setActiveTab(tabId);
     }
@@ -34,7 +37,12 @@ function EditProfile() {
       <Header />
       <div className="my-28 bg-white">
         <div className="sec vh-70 grid grid-cols-1 rounded-lg p-6 md:grid-cols-3 gap-6">
-          <TabsNavigation tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} user={user} />
+          <TabsNavigation
+            tabs={tabs}
+            activeTab={activeTab}
+            onTabChange={handleTabChange}
+            user={user}
+          />
           <div className="col-span-2">
             <AnimatePresence mode="wait">
               <motion.div
