@@ -1256,7 +1256,7 @@ footer .sec {
   margin: auto;
   max-width: fit-content;
   padding: 0 15px;
-  border: 1px solid rgb(229 231 235) ;
+  border: 1px solid rgb(229 231 235);
   border-radius: 50px;
 }
 
@@ -1265,6 +1265,10 @@ footer .sec {
   padding: 0;
   display: flex;
   justify-content: center;
+}
+
+.follower-card {
+  width: 15em;
 }
 
 .tab-link {
@@ -1297,8 +1301,8 @@ footer .sec {
   display: block;
 }
 
-.tab-content .tab-block .followers-container{
-  gap: 20px;
+.tab-content .tab-block .followers-container {
+  gap: 15px;
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -1533,10 +1537,14 @@ form .resetPwd {
   .main-container {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .main-container .left {
     margin-top: 7em;
   }
 
+  .slide-container {
+    width: 90vw;
+  }
 
   /* How it Works  */
 
@@ -1546,9 +1554,10 @@ form .resetPwd {
   /* Feed  */
 
   /* review  */
-  #review .review-container{
+  #review .review-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
   #review .review-container .review-block {
     display: flex;
     flex-direction: column;
@@ -1613,6 +1622,7 @@ form .resetPwd {
   #review {
     margin-bottom: unset;
   }
+
   #main-review .container {
     gap: 1em;
     margin-top: 2em;
@@ -1622,9 +1632,11 @@ form .resetPwd {
   #review-head form input::placeholder {
     font-size: 14px;
   }
+
   #review .review-container {
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
+
   /* Feed  */
   #main-feed {
     margin-bottom: 0;
@@ -1662,6 +1674,10 @@ form .resetPwd {
   #profile-main {
     margin-bottom: unset !important;
   }
+
+  .follower-card {
+    flex-grow: 1;
+  }
 }
 
 /* Small Screen  */
@@ -1672,6 +1688,20 @@ form .resetPwd {
 
   .footer-column {
     justify-content: start;
+  }
+
+
+
+  .tabs {
+    justify-content: start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .tabs .tab-link {
+    margin: unset;
+    padding: 10px 25px;
   }
 }
 
@@ -1746,10 +1776,37 @@ form .resetPwd {
     height: unset;
   }
 
+  .main-container .left {
+    margin-top: 5em;
+  }
+
   #main .main-search {
     width: 100%;
   }
 
+  #main .main-container h1 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .slide-container {
+    width: 95vw;
+    height: 310px;
+  }
+
+  .slide {
+    height: 300px;
+  }
+
+  .slick-prev {
+    left: 0px !important;
+    z-index: 10 !important;
+  }
+
+  .slick-next {
+    right: 0px !important;
+    z-index: 10 !important;
+  }
 
   /* How it works  */
 
@@ -1763,6 +1820,7 @@ form .resetPwd {
     min-height: fit-content;
     padding: 0 1em;
   }
+
   /* Feed  */
   .feedSearchBox,
   .feedSearchBox:focus-within {
@@ -1860,5 +1918,15 @@ form .resetPwd {
 
   #profile-main .container .profile-pic .edit-icon img {
     height: 13px;
+  }
+
+  .tab-wrapper {
+    padding: unset;
+    margin-inline: 1em;
+  }
+
+  #profile-main .container {
+
+    min-height: 45vh;
   }
 }
