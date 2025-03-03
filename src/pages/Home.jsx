@@ -8,6 +8,7 @@ import MainHow from "../components/Home/MainHow";
 import MainReview from "../components/Home/MainReview";
 import MainFeed from "../components/Home/MainFeed";
 import Footer from "../components/Footer";
+import Drag from "../components/Drag"
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <Banner />
       <MainHow />
       <MainReview />
+      {/* <Drag/> */}
       <MainFeed/>
       <Footer/>
     </>
